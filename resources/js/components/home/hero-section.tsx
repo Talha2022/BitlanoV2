@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { useGrain } from '@/hooks/use-grain';
+import { subscribeLenis } from '@/hooks/use-lenis';
 
 const marqueeText =
     'OVERTAKE TIME WITH US - OVERTAKE TIME WITH US - OVERTAKE TIME WITH US - ';
@@ -61,43 +63,7 @@ export default function HeroSection() {
         ctx.drawImage(img, sx * dpr, sy * dpr, sw * dpr, sh * dpr);
     };
 
-    // Grain overlay
-    useEffect(() => {
-        const canvas = grainRef.current;
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-        let raf: number;
-
-        const resize = () => {
-            canvas.width  = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
-        };
-        resize();
-        window.addEventListener('resize', resize);
-
-        const draw = () => {
-            const { width, height } = canvas;
-            if (width === 0 || height === 0) { raf = requestAnimationFrame(draw); return; }
-            const imageData = ctx.createImageData(width, height);
-            const buf = imageData.data;
-            for (let i = 0; i < buf.length; i += 4) {
-                const v = Math.random() * 255 | 0;
-                buf[i]     = v;
-                buf[i + 1] = v;
-                buf[i + 2] = v;
-                buf[i + 3] = 12; // very subtle — just a hint of grain
-            }
-            ctx.putImageData(imageData, 0, 0);
-            raf = requestAnimationFrame(draw);
-        };
-        draw();
-
-        return () => {
-            cancelAnimationFrame(raf);
-            window.removeEventListener('resize', resize);
-        };
-    }, []);
+    useGrain(grainRef);
 
     // Resize canvas
     useEffect(() => {
@@ -202,10 +168,16 @@ export default function HeroSection() {
             }
         };
 
+        const unSubLenis = subscribeLenis(onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
-        return () => window.removeEventListener('scroll', onScroll);
+
+        return () => {
+            unSubLenis();
+            window.removeEventListener('scroll', onScroll);
+        };
     }, []);
+
 
     return (
         <div

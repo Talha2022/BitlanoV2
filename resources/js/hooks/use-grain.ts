@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, type RefObject } from 'react';
 
+const GRAIN_FPS = 12;
 const TILE_SIZE = 256;
 const NUM_TILES = 4;
-const STATIC_FPS = 12;
 
 let tileCanvases: HTMLCanvasElement[] | null = null;
 
@@ -19,15 +19,11 @@ function getTileCanvases(): HTMLCanvasElement[] {
             const imageData = tileCtx.createImageData(TILE_SIZE, TILE_SIZE);
             const buf = imageData.data;
             for (let i = 0; i < buf.length; i += 4) {
-                if (Math.random() < 0.04) {
-                    const v = (Math.random() * 120) | 0;
-                    buf[i] = v;
-                    buf[i + 1] = v;
-                    buf[i + 2] = v;
-                    buf[i + 3] = 180;
-                } else {
-                    buf[i + 3] = 0;
-                }
+                const v = (Math.random() * 255) | 0;
+                buf[i] = v;
+                buf[i + 1] = v;
+                buf[i + 2] = v;
+                buf[i + 3] = 14;
             }
             tileCtx.putImageData(imageData, 0, 0);
             tileCanvases.push(tile);
@@ -37,12 +33,11 @@ function getTileCanvases(): HTMLCanvasElement[] {
 }
 
 /**
- * Attaches an animated TV static canvas to a container element.
- * Uses pre-rendered offscreen tiles for optimal performance.
+ * Attaches an animated grain canvas to the given ref.
+ * Uses pre-rendered offscreen noise tiles & pattern filling for near 0% CPU footprint.
+ * Pauses automatically when out of viewport.
  */
-export function useTvStatic(alpha = 10) {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
-
+export function useGrain(canvasRef: RefObject<HTMLCanvasElement | null>) {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -55,7 +50,7 @@ export function useTvStatic(alpha = 10) {
         let raf: number;
         let last = 0;
         let isVisible = true;
-        const interval = 1000 / STATIC_FPS;
+        const interval = 1000 / GRAIN_FPS;
 
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -96,8 +91,6 @@ export function useTvStatic(alpha = 10) {
             observer.disconnect();
             window.removeEventListener('resize', resize);
         };
-    }, [alpha]);
-
-    return canvasRef;
+    }, []);
 }
 

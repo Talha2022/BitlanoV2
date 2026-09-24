@@ -1,5 +1,4 @@
-import { forwardRef } from 'react';
-import type { PropsWithChildren } from 'react';
+import { forwardRef, type ElementType, type PropsWithChildren } from 'react';
 import { useTvStatic } from '@/hooks/use-tv-static';
 
 type Width = 'full' | 'wide' | 'default' | 'narrow' | 'tight';
@@ -10,8 +9,9 @@ type Props = PropsWithChildren<{
     innerClassName?: string;
     /** Static grain intensity 0–255. Default 14 (~5.5%). Pass 0 to disable. */
     staticAlpha?: number;
-    as?: keyof JSX.IntrinsicElements;
+    as?: ElementType;
 }>;
+
 
 const maxWidths: Record<Width, string> = {
     full:    'max-w-none',
