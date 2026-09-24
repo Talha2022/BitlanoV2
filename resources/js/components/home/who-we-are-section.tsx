@@ -59,7 +59,7 @@ export default function WhoWeAreSection() {
 
                 {/* Heading */}
                 <div className="mb-12 text-left">
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl tracking-[0.12em] text-white leading-tight uppercase font-extralight">
+                    <h2 className="text-[clamp(24px,12vw,90px)] font-extrabold leading-none whitespace-nowrap tracking-tight">
                         Who We Are
                     </h2>
                 </div>
@@ -74,7 +74,7 @@ export default function WhoWeAreSection() {
                                 <div className="text-white/90 text-5xl font-extralight tracking-tight leading-none mb-2">
                                     {stat.value}
                                 </div>
-                                <div className="text-white/50 text-[9px] font-mono tracking-[0.2em] uppercase leading-relaxed whitespace-pre-line">
+                                <div className="text-white/50 text-[9px] tracking-widest uppercase leading-relaxed whitespace-pre-line">
                                     {stat.label}
                                 </div>
                             </HudCard>
@@ -85,12 +85,9 @@ export default function WhoWeAreSection() {
                     <HudCard className="col-span-4 p-0 flex flex-col">
                         <div className="h-full w-full flex flex-col items-center justify-center relative py-8">
                             <div className="absolute top-6 text-center z-10 w-full">
-                                <h3 className="text-white/85 text-lg font-extralight tracking-[0.12em] mb-3 uppercase">
-                                    Based in Europe
-                                </h3>
                                 <div className="flex items-center justify-center gap-2">
                                     <div className="w-2 h-2 bg-green-400/70 rounded-full animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.5)]" />
-                                    <span className="text-white/60 text-xs font-mono tracking-[0.25em] uppercase">Available Worldwide</span>
+                                    <span className="text-white/60 text-xs tracking-widest uppercase">Available Worldwide</span>
                                 </div>
                             </div>
                             <div className="relative w-[75%] aspect-square flex items-center justify-center">
@@ -101,17 +98,21 @@ export default function WhoWeAreSection() {
 
                     {/* Mission statement — col-span-6 (wide card) */}
                     <HudCard className="col-span-6 p-8 flex flex-col">
-                        <div className="flex items-center gap-2 mb-4">
-                            <div className="w-1 h-1 bg-white/20" />
-                            <span className="text-white/50 text-[10px] font-mono tracking-[0.35em]">MISSION · STATEMENT</span>
+                        <div className="relative">
+                            <p className="absolute top-[1.5em] left-2 text-[10px] sm:text-xs tracking-widest text-white/50 whitespace-nowrap leading-none">
+                                This is BITLANO
+                            </p>
+                            <p
+                                className="text-[clamp(18px,2.2vw,36px)] font-light leading-[1.1] tracking-tight text-white"
+                                style={{ textIndent: 'clamp(80px, 12vw, 160px)' }}
+                            >
+                                Culture-driven, creative and competitive. Our digital agency creates
+                                impact for brands. In the disciplines Websites, Social Media, Content
+                                Marketing, Campaigning and Branding. Between timeless and zeitgeist.
+                                When we communicate: Effective. Quick-witted. Ambitious. This is ESE
+                                Agency.
+                            </p>
                         </div>
-                        <div className="relative h-px mb-6">
-                            <div className="absolute inset-0 bg-white/[0.08]" />
-                            <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/30 to-transparent w-12" />
-                        </div>
-                        <p className="text-white text-sm font-extralight tracking-[0.06em] leading-[1.9]">
-                            To empower ambitious brands with precision-crafted digital experiences — blending strategy, design, and technology into systems that move culture forward.
-                        </p>
                     </HudCard>
 
                     {/* Why Work With Us — removed */}
@@ -125,12 +126,9 @@ export default function WhoWeAreSection() {
                     <HudCard className="p-0 min-h-[380px]">
                         <div className="h-full w-full flex flex-col items-center justify-center relative pb-8">
                             <div className="absolute top-6 text-center z-10 w-full">
-                                <h3 className="text-white/85 text-xl font-extralight tracking-[0.12em] mb-2 uppercase">
-                                    Based in Europe
-                                </h3>
                                 <div className="flex items-center justify-center gap-2">
                                     <div className="w-2 h-2 bg-green-400/70 rounded-full animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.5)]" />
-                                    <span className="text-white/60 text-[10px] font-mono tracking-[0.25em] uppercase">Available Worldwide</span>
+                                    <span className="text-white/60 text-[10px] tracking-widest uppercase">Available Worldwide</span>
                                 </div>
                             </div>
                             <div className="relative w-[60%] aspect-square flex items-center justify-center mt-20">
@@ -146,7 +144,7 @@ export default function WhoWeAreSection() {
                                 <div className="text-white/90 text-4xl font-extralight tracking-tight leading-none mb-2">
                                     {stat.value}
                                 </div>
-                                <div className="text-white/50 text-[9px] font-mono tracking-[0.2em] uppercase leading-relaxed whitespace-pre-line">
+                                <div className="text-white/50 text-[9px] tracking-widest uppercase leading-relaxed whitespace-pre-line">
                                     {stat.label}
                                 </div>
                             </HudCard>
@@ -155,16 +153,16 @@ export default function WhoWeAreSection() {
 
                     {/* Mission */}
                     <HudCard className="p-8 flex flex-col">
-                        <div className="flex items-center gap-2 mb-4">
-                            <div className="w-1 h-1 bg-white/20" />
-                            <span className="text-white/50 text-[10px] font-mono tracking-[0.35em]">MISSION · STATEMENT</span>
-                        </div>
-                        <div className="relative h-px mb-6">
-                            <div className="absolute inset-0 bg-white/[0.08]" />
-                            <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/30 to-transparent w-12" />
-                        </div>
-                        <p className="text-white text-sm font-extralight tracking-[0.06em] leading-[1.9]">
-                            To empower ambitious brands with precision-crafted digital experiences — blending strategy, design, and technology into systems that move culture forward.
+                        <p className="absolute top-[1.5em] left-2 text-[10px] tracking-widest text-white/50 whitespace-nowrap leading-none">
+                            This is BITLANO
+                        </p>
+                        <p className="text-[clamp(18px,4vw,28px)] font-light leading-[1.1] tracking-tight text-white"
+                           style={{ textIndent: 'clamp(80px, 12vw, 160px)' }}>
+                            Culture-driven, creative and competitive. Our digital agency creates
+                            impact for brands. In the disciplines Websites, Social Media, Content
+                            Marketing, Campaigning and Branding. Between timeless and zeitgeist.
+                            When we communicate: Effective. Quick-witted. Ambitious. This is ESE
+                            Agency.
                         </p>
                     </HudCard>
 
@@ -173,10 +171,10 @@ export default function WhoWeAreSection() {
                 {/* Toolbox slider — shared desktop + mobile */}
                 <HudCard className="p-4 md:p-6 flex flex-row items-center justify-between gap-4 overflow-hidden">
                     <div className="min-w-[100px] md:min-w-[150px] z-10">
-                        <p className="text-white/80 text-[10px] md:text-sm font-extralight tracking-[0.2em] uppercase mb-0.5">
+                        <p className="text-white/80 text-[10px] md:text-sm font-light tracking-widest uppercase mb-0.5">
                             Everyday's Toolbox
                         </p>
-                        <p className="text-white/30 text-[8px] md:text-[10px] font-mono tracking-[0.2em] uppercase">
+                        <p className="text-white/30 text-[8px] md:text-[10px] tracking-widest uppercase">
                             Mastered for every project.
                         </p>
                     </div>
@@ -190,7 +188,7 @@ export default function WhoWeAreSection() {
                                     <img
                                         src={tool.icon}
                                         alt={tool.name}
-                                        className="w-full h-full object-contain filter invert opacity-40 group-hover:opacity-80 transition-all duration-300"
+                                        className="w-full h-full object-contain filter invert opacity-60 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-300"
                                     />
                                 </div>
                             ))}
