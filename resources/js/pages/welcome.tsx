@@ -4,6 +4,7 @@ import AboutSection from '@/components/home/about-section';
 import WhyUsSection from '@/components/home/why-us-section';
 import WhoWeAreSection from '@/components/home/who-we-are-section';
 import BlogSection from '@/components/home/blog-section';
+import TestimonialsSection from '@/components/home/testimonials-section';
 
 export default function Welcome() {
     return (
@@ -11,9 +12,10 @@ export default function Welcome() {
             <Head title="Home" />
             <HeroSection />
             <AboutSection />
-            <WhyUsSection />
             <WhoWeAreSection />
+            <WhyUsSection />
             <BlogSection />
+            <TestimonialsSection />
         </>
     );
 }
