@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { useGrain } from '@/hooks/use-grain';
+import { HudCard } from '@/components/home/hud-card';
 
 const testimonials = [
     {
@@ -77,55 +78,19 @@ export default function TestimonialsSection() {
                                 'translate-y-0';
 
                             return (
-                                <div
+                                <HudCard
                                     key={i}
-                                    className={`group relative w-[380px] flex-shrink-0 transition-transform duration-500 ${offset} hover:!translate-y-0`}
+                                    className={`rounded-xl w-[380px] flex-shrink-0 transition-transform duration-500 ${offset} hover:!translate-y-0`}
                                 >
-                                    {/* Card bg */}
-                                    <div className="absolute inset-0 bg-[#1a1a1a]" />
-
-                                    {/* Outer border */}
-                                    <div className="absolute inset-0 border border-white/[0.08] group-hover:border-white/[0.20] transition-colors duration-700" />
-
-                                    {/* Corner brackets */}
-                                    {[
-                                        { pos: 'top-0 left-0',     d: 'M1 10 L1 1 L10 1',   cx: 1,  cy: 1  },
-                                        { pos: 'top-0 right-0',    d: 'M30 1 L39 1 L39 10',  cx: 39, cy: 1  },
-                                        { pos: 'bottom-0 left-0',  d: 'M1 30 L1 39 L10 39',  cx: 1,  cy: 39 },
-                                        { pos: 'bottom-0 right-0', d: 'M30 39 L39 39 L39 30', cx: 39, cy: 39 },
-                                    ].map((b, j) => (
-                                        <svg
-                                            key={j}
-                                            className={`absolute ${b.pos} w-8 h-8 text-white/20 group-hover:text-white/40 transition-colors duration-700`}
-                                            viewBox="0 0 40 40"
-                                            fill="none"
-                                            stroke="currentColor"
-                                        >
-                                            <path d={b.d} strokeWidth="0.7" />
-                                            <circle cx={b.cx} cy={b.cy} r="0.8" fill="currentColor" opacity="0.4" />
-                                        </svg>
-                                    ))}
-
-                                    {/* Top rule */}
-                                    <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-white/20 transition-all duration-700" />
-
                                     {/* Content */}
                                     <div className="relative z-10 p-8 flex flex-col min-h-[280px]">
-                                        {/* Index */}
-                                        <div className="flex items-center gap-2 mb-5">
-                                            <span className="text-white/20 text-[8px] tracking-widest">
-                                                {String(i % testimonials.length + 1).padStart(2, '0')}
-                                            </span>
-                                            <div className="flex-1 h-px bg-white/[0.08]" />
-                                        </div>
-
                                         {/* Quote */}
                                         <p className="text-white/80 text-sm font-light tracking-wide leading-[1.8] flex-1">
                                             "{t.quote}"
                                         </p>
 
                                         {/* Author */}
-                                        <div className="mt-6 pt-5 border-t border-white/[0.08] flex items-center gap-4">
+                                        <div className="mt-6 pt-5 flex items-center gap-4">
                                             <img
                                                 src={t.avatar}
                                                 alt={t.author}
@@ -144,7 +109,7 @@ export default function TestimonialsSection() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </HudCard>
                             );
                         })}
                     </div>
