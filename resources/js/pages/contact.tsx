@@ -31,7 +31,7 @@ export default function Contact() {
                         </h1>
 
                         {/* Card 1: Greeting */}
-                        <div className="bg-[#222428] hover:bg-[#26282e] border border-white/5 rounded-2xl p-5 sm:p-6 mb-4 sm:mb-5 transition-all duration-300 shadow-lg">
+                        <div className="bg-transparent hover:bg-[#313131] border border-white/5 rounded-2xl p-5 sm:p-6 mb-4 sm:mb-5 transition-all duration-300 shadow-lg">
                             <div className="flex items-start gap-4 sm:gap-5">
                                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full shrink-0 border border-white/10 shadow-md bg-gradient-to-br from-neutral-600 to-neutral-800 flex items-center justify-center">
                                     <svg className="w-8 h-8 text-white/60" viewBox="0 0 24 24" fill="currentColor">
@@ -54,41 +54,41 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        {/* Card 2: 3 Quick Action Buttons */}
-                        <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-4 sm:mb-5">
+                        {/* 3 Quick Action Buttons */}
+                        <div className="grid grid-cols-3 gap-3 mb-3">
                             {/* Call */}
                             <button
                                 type="button"
-                                onClick={() => (window.location.href = "tel:+10000000000")}
-                                className="bg-[#282a30] hover:bg-[#32353c] border border-white/5 rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] group"
+                                onClick={() => (window.location.href = "tel:+41522123071")}
+                                className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-colors"
                             >
                                 <svg
-                                    className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-200 group-hover:scale-110"
+                                    className="w-5 h-5 text-white mb-2"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                 >
                                     <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                                 </svg>
-                                <span className="text-xs sm:text-sm font-medium text-white/70 group-hover:text-white transition-colors mt-2">
-                                    Call
+                                <span className="text-sm text-[#a0a0a0]">
+                                    Anrufen
                                 </span>
                             </button>
 
                             {/* Email */}
                             <button
                                 type="button"
-                                onClick={() => (window.location.href = "mailto:info@bitlano.com")}
-                                className="bg-[#282a30] hover:bg-[#32353c] border border-white/5 rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] group"
+                                onClick={() => (window.location.href = "mailto:info@eseagency.ch")}
+                                className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-colors"
                             >
                                 <svg
-                                    className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-200 group-hover:scale-110"
+                                    className="w-5 h-5 text-white mb-2"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                 >
                                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                                 </svg>
-                                <span className="text-xs sm:text-sm font-medium text-white/70 group-hover:text-white transition-colors mt-2">
-                                    Email
+                                <span className="text-sm text-[#a0a0a0]">
+                                    E-Mail
                                 </span>
                             </button>
 
@@ -96,54 +96,56 @@ export default function Contact() {
                             <button
                                 type="button"
                                 onClick={() =>
-                                    window.open("https://maps.google.com/", "_blank")
+                                    window.open("https://maps.google.com/?q=Grubenstrasse+54+8045+Zurich+Switzerland", "_blank")
                                 }
-                                className="bg-[#282a30] hover:bg-[#32353c] border border-white/5 rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] group"
+                                className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-colors"
                             >
                                 <svg
-                                    className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-200 group-hover:scale-110"
+                                    className="w-5 h-5 text-white mb-2"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                 >
                                     <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
                                 </svg>
-                                <span className="text-xs sm:text-sm font-medium text-white/70 group-hover:text-white transition-colors mt-2">
+                                <span className="text-sm text-[#a0a0a0]">
                                     Route
                                 </span>
                             </button>
                         </div>
 
-                        {/* Card 3: Phone Detail */}
-                        <div className="bg-[#222428] hover:bg-[#26282e] border border-white/5 rounded-2xl p-5 mb-4 sm:mb-5 transition-all duration-200 group cursor-pointer">
-                            <p className="text-xs text-white/40 font-medium tracking-wide mb-1">Phone</p>
+                        {/* Phone Detail */}
+                        <div className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 mb-3 transition-colors cursor-pointer">
+                            <p className="text-sm text-[#a0a0a0] mb-1">Telefon</p>
                             <a
-                                href="tel:+10000000000"
-                                className="text-base sm:text-lg font-semibold text-white/90 group-hover:text-white transition-colors no-underline block"
+                                href="tel:+41522123071"
+                                className="text-base text-white no-underline block"
                             >
-                                +1 000 000 0000
+                                +41 52 212 30 71
                             </a>
                         </div>
 
-                        {/* Card 4: Email Detail */}
-                        <div className="bg-[#212328] hover:bg-[#26282e] border border-white/5 rounded-2xl p-5 mb-4 sm:mb-5 transition-all duration-200 group cursor-pointer">
-                            <p className="text-xs text-white/40 font-medium tracking-wide mb-1">Email</p>
+                        {/* Email Detail */}
+                        <div className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 mb-3 transition-colors cursor-pointer">
+                            <p className="text-sm text-[#a0a0a0] mb-1">E-Mail</p>
                             <a
-                                href="mailto:info@bitlano.com"
-                                className="text-base sm:text-lg font-semibold text-white/90 group-hover:text-white transition-colors no-underline block"
+                                href="mailto:info@eseagency.ch"
+                                className="text-base text-white no-underline block"
                             >
-                                info@bitlano.com
+                                info@eseagency.ch
                             </a>
                         </div>
 
-                        {/* Card 5: Address Detail */}
-                        <div className="bg-[#212328] hover:bg-[#26282e] border border-white/5 rounded-2xl p-5 transition-all duration-200">
-                            <p className="text-xs text-white/40 font-medium tracking-wide mb-1">Address</p>
-                            <div className="text-base sm:text-lg font-semibold text-white/90 leading-snug">
-                                Bitlano
+                        {/* Address Detail */}
+                        <div className="bg-[#313131] rounded-xl p-4 transition-colors">
+                            <p className="text-sm text-[#a0a0a0] mb-1">Adresse</p>
+                            <div className="text-base text-white leading-snug">
+                                ESE Agency
                                 <br />
-                                Your Street 00
+                                Grubenstrasse 54
                                 <br />
-                                City, Country
+                                8045 Zürich
+                                <br />
+                                Schweiz
                             </div>
                         </div>
                     </div>
