@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { Head } from "@inertiajs/react";
 import StaticBackground from "@/components/contact/static-background";
 
@@ -19,10 +19,10 @@ export default function Contact() {
                 {/* LEFT COLUMN: Contact Cards & Details */}
                 <div
                     className="w-full lg:w-[48%] xl:w-[45%] 2xl:w-[42%] relative px-6 sm:px-10 lg:px-14 pt-24 sm:pt-28 pb-10 sm:pb-14 flex flex-col justify-between z-10"
-                    style={{ backgroundColor: "#1c1c1e" }}
+                    style={{ backgroundColor: "#1a1a1a" }}
                 >
                     {/* TV static overlay scoped to left column */}
-                    <StaticBackground opacity={0.07} />
+                    <StaticBackground />
 
                     <div className="relative z-10">
                         {/* Main Title */}
