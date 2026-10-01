@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { Head } from "@inertiajs/react";
-import StaticBackground from "@/components/contact/static-background";
+import { useEffect } from 'react';
+import { Head } from '@inertiajs/react';
+import StaticBackground from '@/components/contact/static-background';
 
-const keyvisual = "/assets/contact/main.jpg";
+const keyvisual = '/assets/contact/main.jpg';
 
 export default function Contact() {
     useEffect(() => {
@@ -14,38 +14,44 @@ export default function Contact() {
             <Head title="Contact" />
 
             {/* Main Split Layout */}
-            <div className="flex-1 w-full flex flex-col lg:flex-row min-h-screen">
-
+            <div className="flex min-h-screen w-full flex-1 flex-col lg:flex-row">
                 {/* LEFT COLUMN: Contact Cards & Details */}
                 <div
-                    className="w-full lg:w-[48%] xl:w-[45%] 2xl:w-[42%] relative px-6 sm:px-10 lg:px-14 pt-24 sm:pt-28 pb-10 sm:pb-14 flex flex-col justify-between z-10"
-                    style={{ backgroundColor: "#1a1a1a" }}
+                    className="relative z-10 flex w-full flex-col justify-between px-6 pt-24 pb-10 sm:px-10 sm:pt-28 sm:pb-14 lg:w-[48%] lg:px-14 xl:w-[45%] 2xl:w-[42%]"
+                    style={{ backgroundColor: '#1a1a1a' }}
                 >
                     {/* TV static overlay scoped to left column */}
                     <StaticBackground />
 
                     <div className="relative z-10">
                         {/* Main Title */}
-                        <h1 className="text-[56px] sm:text-[68px] lg:text-[76px] font-bold tracking-tight text-white mb-6 sm:mb-8 leading-none">
+                        <h1 className="mb-6 text-[56px] leading-none font-bold tracking-tight text-white sm:mb-8 sm:text-[68px] lg:text-[76px]">
                             Contact
                         </h1>
 
                         {/* Card 1: Greeting */}
-                        <div className="bg-transparent hover:bg-[#313131] border border-white/5 rounded-2xl p-5 sm:p-6 mb-4 sm:mb-5 transition-all duration-300 shadow-lg">
+                        <div className="mb-4 rounded-2xl border border-white/5 bg-transparent p-5 shadow-lg transition-all duration-300 hover:bg-[#313131] sm:mb-5 sm:p-6">
                             <div className="flex items-start gap-4 sm:gap-5">
-                                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full shrink-0 border border-white/10 shadow-md bg-gradient-to-br from-neutral-600 to-neutral-800 flex items-center justify-center">
-                                    <svg className="w-8 h-8 text-white/60" viewBox="0 0 24 24" fill="currentColor">
+                                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-neutral-600 to-neutral-800 shadow-md sm:h-20 sm:w-20">
+                                    <svg
+                                        className="h-8 w-8 text-white/60"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                    >
                                         <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
                                     </svg>
                                 </div>
-                                <div className="text-sm sm:text-base text-white/80 leading-snug sm:leading-relaxed">
-                                    Hi, we would be happy to help you with your project. 👏
+                                <div className="text-sm leading-snug text-white/80 sm:text-base sm:leading-relaxed">
+                                    Hi, we would be happy to help you with your
+                                    project. 👏
                                     <br />
-                                    <span className="font-bold text-white">Just write us an email</span>
+                                    <span className="font-bold text-white">
+                                        Just write us an email
+                                    </span>
                                     <br />
                                     <a
                                         href="mailto:info@bitlano.com"
-                                        className="font-bold text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors"
+                                        className="font-bold text-white underline decoration-white/40 underline-offset-4 transition-colors hover:decoration-white"
                                     >
                                         info@bitlano.com
                                     </a>
@@ -55,15 +61,17 @@ export default function Contact() {
                         </div>
 
                         {/* 3 Quick Action Buttons */}
-                        <div className="grid grid-cols-3 gap-3 mb-3">
+                        <div className="mb-3 grid grid-cols-3 gap-3">
                             {/* Call */}
                             <button
                                 type="button"
-                                onClick={() => (window.location.href = "tel:+41522123071")}
-                                className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-colors"
+                                onClick={() =>
+                                    (window.location.href = 'tel:+41522123071')
+                                }
+                                className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-[#313131] p-4 text-center transition-colors hover:bg-[#3a3a3a]"
                             >
                                 <svg
-                                    className="w-5 h-5 text-white mb-2"
+                                    className="mb-2 h-5 w-5 text-white"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                 >
@@ -77,11 +85,14 @@ export default function Contact() {
                             {/* Email */}
                             <button
                                 type="button"
-                                onClick={() => (window.location.href = "mailto:info@eseagency.ch")}
-                                className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-colors"
+                                onClick={() =>
+                                    (window.location.href =
+                                        'mailto:info@eseagency.ch')
+                                }
+                                className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-[#313131] p-4 text-center transition-colors hover:bg-[#3a3a3a]"
                             >
                                 <svg
-                                    className="w-5 h-5 text-white mb-2"
+                                    className="mb-2 h-5 w-5 text-white"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                 >
@@ -96,12 +107,15 @@ export default function Contact() {
                             <button
                                 type="button"
                                 onClick={() =>
-                                    window.open("https://maps.google.com/?q=Grubenstrasse+54+8045+Zurich+Switzerland", "_blank")
+                                    window.open(
+                                        'https://maps.google.com/?q=Grubenstrasse+54+8045+Zurich+Switzerland',
+                                        '_blank',
+                                    )
                                 }
-                                className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer transition-colors"
+                                className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-[#313131] p-4 text-center transition-colors hover:bg-[#3a3a3a]"
                             >
                                 <svg
-                                    className="w-5 h-5 text-white mb-2"
+                                    className="mb-2 h-5 w-5 text-white"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                 >
@@ -114,31 +128,37 @@ export default function Contact() {
                         </div>
 
                         {/* Phone Detail */}
-                        <div className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 mb-3 transition-colors cursor-pointer">
-                            <p className="text-sm text-[#a0a0a0] mb-1">Telefon</p>
+                        <div className="mb-3 cursor-pointer rounded-xl bg-[#313131] p-4 transition-colors hover:bg-[#3a3a3a]">
+                            <p className="mb-1 text-sm text-[#a0a0a0]">
+                                Telefon
+                            </p>
                             <a
                                 href="tel:+41522123071"
-                                className="text-base text-white no-underline block"
+                                className="block text-base text-white no-underline"
                             >
                                 +41 52 212 30 71
                             </a>
                         </div>
 
                         {/* Email Detail */}
-                        <div className="bg-[#313131] hover:bg-[#3a3a3a] rounded-xl p-4 mb-3 transition-colors cursor-pointer">
-                            <p className="text-sm text-[#a0a0a0] mb-1">E-Mail</p>
+                        <div className="mb-3 cursor-pointer rounded-xl bg-[#313131] p-4 transition-colors hover:bg-[#3a3a3a]">
+                            <p className="mb-1 text-sm text-[#a0a0a0]">
+                                E-Mail
+                            </p>
                             <a
                                 href="mailto:info@eseagency.ch"
-                                className="text-base text-white no-underline block"
+                                className="block text-base text-white no-underline"
                             >
                                 info@eseagency.ch
                             </a>
                         </div>
 
                         {/* Address Detail */}
-                        <div className="bg-[#313131] rounded-xl p-4 transition-colors">
-                            <p className="text-sm text-[#a0a0a0] mb-1">Adresse</p>
-                            <div className="text-base text-white leading-snug">
+                        <div className="rounded-xl bg-[#313131] p-4 transition-colors">
+                            <p className="mb-1 text-sm text-[#a0a0a0]">
+                                Adresse
+                            </p>
+                            <div className="text-base leading-snug text-white">
                                 ESE Agency
                                 <br />
                                 Grubenstrasse 54
@@ -152,18 +172,14 @@ export default function Contact() {
                 </div>
 
                 {/* RIGHT COLUMN: Keyvisual — hidden on small mobile */}
-                <div className="hidden sm:flex w-full lg:w-[52%] xl:w-[55%] 2xl:w-[58%] min-h-[400px] lg:min-h-screen relative flex-col justify-end items-center overflow-hidden">
+                <div className="relative hidden min-h-[400px] w-full flex-col items-center justify-end overflow-hidden sm:flex lg:min-h-screen lg:w-[52%] xl:w-[55%] 2xl:w-[58%]">
                     {/* Keyvisual background image */}
                     <img
                         src={keyvisual}
                         alt="Bitlano contact"
-                        className="absolute inset-0 w-full h-full object-cover object-center"
+                        className="absolute inset-0 h-full w-full object-cover object-center"
                     />
-
-                    
-                    
                 </div>
-
             </div>
         </>
     );

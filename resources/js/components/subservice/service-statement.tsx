@@ -33,22 +33,22 @@ export default function ServiceStatement({
     useGrain(grainRef);
 
     return (
-        <section className="relative bg-black text-white overflow-hidden">
+        <section className="relative overflow-hidden bg-black text-white">
             {/* Grain overlay */}
             <canvas
                 ref={grainRef}
                 aria-hidden="true"
-                className="absolute inset-0 z-0 w-full h-full pointer-events-none"
+                className="pointer-events-none absolute inset-0 z-0 h-full w-full"
             />
 
             {/* Top border */}
-            <div className="border-t border-white/10 mx-6 sm:mx-10 relative z-10" />
+            <div className="relative z-10 mx-6 border-t border-white/10 sm:mx-10" />
 
             {/* Upper block — label + large text */}
-            <div className="relative z-10 px-6 sm:px-10 pt-12 sm:pt-16 pb-14 sm:pb-20 max-w-7xl mx-auto">
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-16">
+            <div className="relative z-10 mx-auto max-w-7xl px-6 pt-12 pb-14 sm:px-10 sm:pt-16 sm:pb-20">
+                <div className="flex flex-col gap-4 sm:flex-row sm:gap-16">
                     {/* Left — small label */}
-                    <div className="sm:w-64 shrink-0 pt-2">
+                    <div className="shrink-0 pt-2 sm:w-64">
                         <span className="text-xs tracking-widest text-white/50 uppercase">
                             {label}
                         </span>
@@ -56,7 +56,7 @@ export default function ServiceStatement({
 
                     {/* Right — large statement */}
                     <div className="flex-1">
-                        <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light leading-tight tracking-tight text-white">
+                        <p className="text-2xl leading-tight font-light tracking-tight text-white sm:text-3xl lg:text-4xl xl:text-5xl">
                             {text}
                         </p>
                     </div>
@@ -64,14 +64,14 @@ export default function ServiceStatement({
             </div>
 
             {/* Mid divider */}
-            <div className="border-t border-white/10 mx-6 sm:mx-10 relative z-10" />
+            <div className="relative z-10 mx-6 border-t border-white/10 sm:mx-10" />
 
             {/* Lower block — stats */}
-            <div className="relative z-10 px-6 sm:px-10 pt-10 sm:pt-12 pb-12 sm:pb-16">
-                <div className="flex justify-center gap-10 sm:gap-24 lg:gap-72 flex-wrap">
+            <div className="relative z-10 px-6 pt-10 pb-12 sm:px-10 sm:pt-12 sm:pb-16">
+                <div className="flex flex-wrap justify-center gap-10 sm:gap-24 lg:gap-72">
                     {stats.map(({ value, label: statLabel }) => (
                         <div key={statLabel} className="flex flex-col gap-2">
-                            <span className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-none">
+                            <span className="text-4xl leading-none font-light text-white sm:text-5xl lg:text-6xl">
                                 {value}
                             </span>
                             <span className="text-xs tracking-widest text-white/50 uppercase">
@@ -83,7 +83,7 @@ export default function ServiceStatement({
             </div>
 
             {/* Bottom border */}
-            <div className="border-b border-white/10 mx-6 sm:mx-10 relative z-10" />
+            <div className="relative z-10 mx-6 border-b border-white/10 sm:mx-10" />
         </section>
     );
 }

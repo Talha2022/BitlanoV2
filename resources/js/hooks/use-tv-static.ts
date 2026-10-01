@@ -61,7 +61,7 @@ export function useTvStatic(alpha = 10) {
             ([entry]) => {
                 isVisible = entry.isIntersecting;
             },
-            { threshold: 0 }
+            { threshold: 0 },
         );
         observer.observe(canvas);
 
@@ -100,4 +100,3 @@ export function useTvStatic(alpha = 10) {
 
     return canvasRef;
 }
-

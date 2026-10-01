@@ -16,22 +16,22 @@ const FRAMES = Array.from(
 const getScrollRange = () => (window.innerWidth < 768 ? 500 : 800);
 
 export default function HeroSection() {
-    const wrapperRef     = useRef<HTMLDivElement>(null);
-    const labelsRef      = useRef<HTMLDivElement>(null);
-    const marqueeRef     = useRef<HTMLDivElement>(null);
-    const blackRef       = useRef<HTMLDivElement>(null);
-    const grainRef       = useRef<HTMLCanvasElement>(null);
-    const canvasRef      = useRef<HTMLCanvasElement>(null);
-    const imagesRef      = useRef<HTMLImageElement[]>([]);
-    const lastDrawnRef   = useRef(-1);
-    const introsDoneRef  = useRef(false);
-    const rafRef         = useRef<number | null>(null);
-    const lastTimeRef    = useRef<number | null>(null);
+    const wrapperRef = useRef<HTMLDivElement>(null);
+    const labelsRef = useRef<HTMLDivElement>(null);
+    const marqueeRef = useRef<HTMLDivElement>(null);
+    const blackRef = useRef<HTMLDivElement>(null);
+    const grainRef = useRef<HTMLCanvasElement>(null);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const imagesRef = useRef<HTMLImageElement[]>([]);
+    const lastDrawnRef = useRef(-1);
+    const introsDoneRef = useRef(false);
+    const rafRef = useRef<number | null>(null);
+    const lastTimeRef = useRef<number | null>(null);
     const scrollRangeRef = useRef(getScrollRange());
 
     const drawFrame = (idx: number) => {
         const canvas = canvasRef.current;
-        const imgs   = imagesRef.current;
+        const imgs = imagesRef.current;
         if (!canvas || !imgs[idx]) return;
         if (lastDrawnRef.current === idx) return;
         lastDrawnRef.current = idx;
@@ -56,8 +56,8 @@ export default function HeroSection() {
         const sh = ih * scale;
         const sx = (lw - sw) / 2;
         const sy = isMobile
-            ? (lh - sh) * 0.25  // anchor 25% from top on mobile
-            : (lh - sh) / 2;    // dead center on desktop
+            ? (lh - sh) * 0.25 // anchor 25% from top on mobile
+            : (lh - sh) / 2; // dead center on desktop
 
         ctx.clearRect(0, 0, cw, ch);
         ctx.drawImage(img, sx * dpr, sy * dpr, sw * dpr, sh * dpr);
@@ -72,9 +72,9 @@ export default function HeroSection() {
 
         const resize = () => {
             const dpr = window.devicePixelRatio || 1;
-            const w   = canvas.offsetWidth;
-            const h   = canvas.offsetHeight;
-            canvas.width  = Math.round(w * dpr);
+            const w = canvas.offsetWidth;
+            const h = canvas.offsetHeight;
+            canvas.width = Math.round(w * dpr);
             canvas.height = Math.round(h * dpr);
             scrollRangeRef.current = getScrollRange();
             if (wrapperRef.current) {
@@ -140,7 +140,7 @@ export default function HeroSection() {
             if (!wrapper) return;
 
             const SCROLL_RANGE = scrollRangeRef.current;
-            const top      = wrapper.getBoundingClientRect().top;
+            const top = wrapper.getBoundingClientRect().top;
             const scrolled = Math.max(-top, 0);
             const progress = Math.min(scrolled / SCROLL_RANGE, 1);
 
@@ -153,13 +153,13 @@ export default function HeroSection() {
             if (labelsRef.current) {
                 const travel = window.innerWidth < 768 ? 120 : 220;
                 labelsRef.current.style.transform = `translateY(calc(-50% - ${progress * travel}px))`;
-                labelsRef.current.style.opacity   = `${1 - progress * 2}`;
+                labelsRef.current.style.opacity = `${1 - progress * 2}`;
             }
 
             if (marqueeRef.current) {
                 const travel = window.innerWidth < 768 ? 200 : 400;
                 marqueeRef.current.style.transform = `translateY(calc(0px - ${progress * travel}px))`;
-                marqueeRef.current.style.opacity   = `${1 - progress * 1.5}`;
+                marqueeRef.current.style.opacity = `${1 - progress * 1.5}`;
             }
 
             if (blackRef.current) {
@@ -178,19 +178,20 @@ export default function HeroSection() {
         };
     }, []);
 
-
     return (
         <div
             ref={wrapperRef}
             style={{ height: `calc(100svh + ${scrollRangeRef.current}px)` }}
         >
-            <div className="sticky top-0 h-svh w-full overflow-hidden flex flex-col text-white">
-
+            <div className="sticky top-0 flex h-svh w-full flex-col overflow-hidden text-white">
                 {/* Frame canvas */}
-                <div className="absolute inset-0 z-0" style={{ background: '#000' }}>
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{ background: '#000' }}
+                >
                     <canvas
                         ref={canvasRef}
-                        className="w-full h-full"
+                        className="h-full w-full"
                         style={{ display: 'block' }}
                     />
                 </div>
@@ -205,13 +206,13 @@ export default function HeroSection() {
                 <canvas
                     ref={grainRef}
                     aria-hidden="true"
-                    className="absolute inset-0 z-[2] w-full h-full pointer-events-none"
+                    className="pointer-events-none absolute inset-0 z-[2] h-full w-full"
                 />
 
                 {/* Descriptor labels */}
                 <div
                     ref={labelsRef}
-                    className="absolute z-20 w-full top-1/2 -translate-y-1/2 flex justify-between px-6 sm:px-10 text-[10px] sm:text-xs tracking-widest pointer-events-none will-change-transform"
+                    className="pointer-events-none absolute top-1/2 z-20 flex w-full -translate-y-1/2 justify-between px-6 text-[10px] tracking-widest will-change-transform sm:px-10 sm:text-xs"
                 >
                     <span>modern</span>
                     <span className="hidden sm:inline">high quality</span>
@@ -221,22 +222,21 @@ export default function HeroSection() {
                 {/* Marquee */}
                 <div
                     ref={marqueeRef}
-                    className="absolute top-[55%] sm:top-[60%] left-0 w-full z-20 overflow-hidden will-change-transform"
+                    className="absolute top-[55%] left-0 z-20 w-full overflow-hidden will-change-transform sm:top-[60%]"
                     aria-label="Overtake time with us"
                 >
                     <div className="flex w-max animate-marquee">
-                        <span className="text-[clamp(48px,12vw,180px)] font-extrabold leading-none whitespace-nowrap tracking-tight">
+                        <span className="text-[clamp(48px,12vw,180px)] leading-none font-extrabold tracking-tight whitespace-nowrap">
                             {marqueeText}
                         </span>
                         <span
-                            className="text-[clamp(48px,12vw,180px)] font-extrabold leading-none whitespace-nowrap tracking-tight"
+                            className="text-[clamp(48px,12vw,180px)] leading-none font-extrabold tracking-tight whitespace-nowrap"
                             aria-hidden="true"
                         >
                             {marqueeText}
                         </span>
                     </div>
                 </div>
-
             </div>
         </div>
     );

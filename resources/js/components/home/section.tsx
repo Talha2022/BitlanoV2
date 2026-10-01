@@ -12,13 +12,12 @@ type Props = PropsWithChildren<{
     as?: ElementType;
 }>;
 
-
 const maxWidths: Record<Width, string> = {
-    full:    'max-w-none',
-    wide:    'max-w-[1400px]',
+    full: 'max-w-none',
+    wide: 'max-w-[1400px]',
     default: 'max-w-7xl',
-    narrow:  'max-w-5xl',
-    tight:   'max-w-3xl',
+    narrow: 'max-w-5xl',
+    tight: 'max-w-3xl',
 };
 
 /**
@@ -53,7 +52,9 @@ const Section = forwardRef<HTMLElement, Props>(function Section(
             />
 
             {/* Content */}
-            <div className={`relative z-10 ${maxWidths[width]} mx-auto w-full ${innerClassName}`}>
+            <div
+                className={`relative z-10 ${maxWidths[width]} mx-auto w-full ${innerClassName}`}
+            >
                 {children}
             </div>
         </Tag>

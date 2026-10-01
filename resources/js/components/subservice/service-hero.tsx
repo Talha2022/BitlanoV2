@@ -14,7 +14,11 @@ interface ServiceHeroProps {
  *   label    – small top-left label (e.g. "Websites")
  *   bgImage  – full-bleed background image src
  */
-export default function ServiceHero({ title = 'Expertise', label, bgImage }: ServiceHeroProps) {
+export default function ServiceHero({
+    title = 'Expertise',
+    label,
+    bgImage,
+}: ServiceHeroProps) {
     const marqueeRef = useRef<HTMLDivElement>(null);
 
     // Scroll-driven marquee lift (same pattern as HeroSection)
@@ -34,29 +38,29 @@ export default function ServiceHero({ title = 'Expertise', label, bgImage }: Ser
     const marqueeText = `${title} · ${title} · ${title} · ${title} · ${title} · `;
 
     return (
-        <div className="relative w-full h-svh overflow-hidden">
+        <div className="relative h-svh w-full overflow-hidden">
             {/* Background image */}
             {bgImage && (
                 <img
                     src={bgImage}
                     alt={title}
-                    className="absolute inset-0 w-full h-full object-cover object-top"
+                    className="absolute inset-0 h-full w-full object-cover object-top"
                     draggable={false}
                 />
             )}
 
             {/* Bottom fade */}
-            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent pointer-events-none z-10" />
+            <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-1/3 bg-gradient-to-t from-black to-transparent" />
 
             {/* Label + Marquee grouped so label always sits right above title */}
             <div
                 ref={marqueeRef}
-                className="absolute bottom-10 left-0 w-full z-20 will-change-transform"
+                className="absolute bottom-10 left-0 z-20 w-full will-change-transform"
                 aria-label={title}
             >
                 {/* Small label */}
                 {label && (
-                    <div className="px-6 sm:px-10 mb-3">
+                    <div className="mb-3 px-6 sm:px-10">
                         <span className="text-xs tracking-widest text-white/70 uppercase">
                             {label}
                         </span>
@@ -66,11 +70,11 @@ export default function ServiceHero({ title = 'Expertise', label, bgImage }: Ser
                 {/* Marquee */}
                 <div className="overflow-hidden">
                     <div className="flex w-max animate-marquee">
-                        <span className="text-[clamp(48px,12vw,180px)] font-extrabold leading-none whitespace-nowrap tracking-tight text-white">
+                        <span className="text-[clamp(48px,12vw,180px)] leading-none font-extrabold tracking-tight whitespace-nowrap text-white">
                             {marqueeText}
                         </span>
                         <span
-                            className="text-[clamp(48px,12vw,180px)] font-extrabold leading-none whitespace-nowrap tracking-tight text-white"
+                            className="text-[clamp(48px,12vw,180px)] leading-none font-extrabold tracking-tight whitespace-nowrap text-white"
                             aria-hidden="true"
                         >
                             {marqueeText}

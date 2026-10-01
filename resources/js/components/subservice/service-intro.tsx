@@ -21,35 +21,35 @@ export default function ServiceIntro({
     useGrain(grainRef);
 
     return (
-        <section className="relative bg-black text-white overflow-hidden">
+        <section className="relative overflow-hidden bg-black text-white">
             {/* Grain overlay */}
             <canvas
                 ref={grainRef}
                 aria-hidden="true"
-                className="absolute inset-0 z-0 w-full h-full pointer-events-none"
+                className="pointer-events-none absolute inset-0 z-0 h-full w-full"
             />
             {/* Top border line */}
-            <div className="border-t border-white/10 mx-6 sm:mx-10" />
+            <div className="mx-6 border-t border-white/10 sm:mx-10" />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-28 px-6 sm:px-10 py-12 sm:py-24 max-w-7xl mx-auto">
+            <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-4 px-6 py-12 sm:flex-row sm:gap-28 sm:px-10 sm:py-24">
                 {/* Left — label */}
-                <div className="sm:w-[340px] shrink-0 pt-1">
+                <div className="shrink-0 pt-1 sm:w-[340px]">
                     <span className="text-xs tracking-widest text-white/50 uppercase">
                         {label}
                     </span>
                 </div>
 
                 {/* Right — body text */}
-                <div className="flex-1 max-w-2xl">
-                    <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-white/85">
+                <div className="max-w-2xl flex-1">
+                    <p className="text-base leading-relaxed text-white/85 sm:text-lg lg:text-xl">
                         {text}
                     </p>
                 </div>
             </div>
 
             {/* Bottom border line */}
-            <div className="border-b border-white/10 mx-6 sm:mx-10" />
+            <div className="mx-6 border-b border-white/10 sm:mx-10" />
         </section>
     );
 }

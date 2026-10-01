@@ -44,7 +44,7 @@ export default function StaticBackground() {
         <canvas
             ref={canvasRef}
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full pointer-events-none"
+            className="pointer-events-none absolute inset-0 h-full w-full"
             style={{ zIndex: 0 }}
         />
     );

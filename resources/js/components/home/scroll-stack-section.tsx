@@ -31,14 +31,14 @@ function Panel({ item, index, onProgress }: PanelProps) {
 
     // Tagline cycler
     const [taglineIndex, setTaglineIndex] = useState(0);
-    const [visible, setVisible]           = useState(true);
+    const [visible, setVisible] = useState(true);
 
     useEffect(() => {
         if (!item.taglines?.length) return;
         const interval = setInterval(() => {
             setVisible(false);
             setTimeout(() => {
-                setTaglineIndex(i => (i + 1) % item.taglines.length);
+                setTaglineIndex((i) => (i + 1) % item.taglines.length);
                 setVisible(true);
             }, 400);
         }, 3000);
@@ -51,10 +51,10 @@ function Panel({ item, index, onProgress }: PanelProps) {
             const el = wrapperRef.current;
             if (!el) return;
             const { top, height } = el.getBoundingClientRect();
-            const vh         = window.innerHeight;
+            const vh = window.innerHeight;
             const scrollable = height - vh;
-            const scrolled   = -top;
-            const progress   = Math.min(Math.max(scrolled / scrollable, 0), 1);
+            const scrolled = -top;
+            const progress = Math.min(Math.max(scrolled / scrollable, 0), 1);
             onProgress(index, progress);
         };
 
@@ -70,10 +70,9 @@ function Panel({ item, index, onProgress }: PanelProps) {
 
     return (
         // Tall wrapper — controls how long the user scrolls within this panel
-        <div ref={wrapperRef} className="h-[200vh] relative">
+        <div ref={wrapperRef} className="relative h-[200vh]">
             {/* Sticky panel */}
             <div className="sticky top-0 h-screen w-full overflow-hidden">
-
                 {/* Background gradient */}
                 <div
                     className="absolute inset-0 z-0"
@@ -86,7 +85,7 @@ function Panel({ item, index, onProgress }: PanelProps) {
                         <img
                             src={item.foregroundImage}
                             alt=""
-                            className="w-full h-full object-cover object-[center_30%]"
+                            className="h-full w-full object-cover object-[center_30%]"
                         />
                     </div>
                 )}
@@ -96,19 +95,19 @@ function Panel({ item, index, onProgress }: PanelProps) {
 
                 {/* Label — top left */}
                 <div className="absolute top-8 left-8 z-10">
-                    <span className="text-sm font-medium text-white/80 tracking-wide">
+                    <span className="text-sm font-medium tracking-wide text-white/80">
                         {item.label}
                     </span>
                 </div>
 
                 {/* Oversized title — marquee scrolling left */}
-                <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 z-10 overflow-hidden">
+                <div className="absolute right-0 bottom-16 left-0 z-10 overflow-hidden sm:bottom-20">
                     <div className="flex w-max animate-marquee">
-                        <h2 className="text-[16vw] sm:text-[13vw] font-bold leading-none tracking-tight text-white whitespace-nowrap pr-[10vw]">
+                        <h2 className="pr-[10vw] text-[16vw] leading-none font-bold tracking-tight whitespace-nowrap text-white sm:text-[13vw]">
                             {item.title}
                         </h2>
                         <h2
-                            className="text-[16vw] sm:text-[13vw] font-bold leading-none tracking-tight text-white whitespace-nowrap pr-[10vw]"
+                            className="pr-[10vw] text-[16vw] leading-none font-bold tracking-tight whitespace-nowrap text-white sm:text-[13vw]"
                             aria-hidden="true"
                         >
                             {item.title}
@@ -118,7 +117,7 @@ function Panel({ item, index, onProgress }: PanelProps) {
                     {/* Animated tagline below title */}
                     {item.taglines?.length > 0 && (
                         <p
-                            className={`text-xs sm:text-sm font-light text-white/70 pl-4 sm:pl-6 mt-1 sm:mt-2 tracking-widest transition-opacity duration-[400ms] ${
+                            className={`mt-1 pl-4 text-xs font-light tracking-widest text-white/70 transition-opacity duration-[400ms] sm:mt-2 sm:pl-6 sm:text-sm ${
                                 visible ? 'opacity-100' : 'opacity-0'
                             }`}
                         >
@@ -133,22 +132,26 @@ function Panel({ item, index, onProgress }: PanelProps) {
 
 // ─── Progress Bars ────────────────────────────────────────────────────────────
 
-function ProgressBars({ total, barsContainerRef, barFillRefs }: ProgressBarsProps) {
+function ProgressBars({
+    total,
+    barsContainerRef,
+    barFillRefs,
+}: ProgressBarsProps) {
     return (
         <div
             ref={barsContainerRef}
-            className="fixed bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 z-50 flex gap-1.5 sm:gap-2 transition-opacity duration-300 opacity-0 pointer-events-none"
+            className="pointer-events-none fixed right-4 bottom-4 left-4 z-50 flex gap-1.5 opacity-0 transition-opacity duration-300 sm:right-8 sm:bottom-8 sm:left-8 sm:gap-2"
         >
             {Array.from({ length: total }).map((_, i) => (
                 <div
                     key={i}
-                    className="flex-1 h-[2px] bg-white/20 rounded-full overflow-hidden"
+                    className="h-[2px] flex-1 overflow-hidden rounded-full bg-white/20"
                 >
                     <div
                         ref={(el) => {
                             barFillRefs.current[i] = el;
                         }}
-                        className="h-full bg-white rounded-full transition-none w-0"
+                        className="h-full w-0 rounded-full bg-white transition-none"
                     />
                 </div>
             ))}
@@ -162,7 +165,9 @@ interface ScrollStackSectionProps {
     sections: SectionItem[];
 }
 
-export default function ScrollStackSection({ sections }: ScrollStackSectionProps) {
+export default function ScrollStackSection({
+    sections,
+}: ScrollStackSectionProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const barsContainerRef = useRef<HTMLDivElement>(null);
     const barFillRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -206,9 +211,11 @@ export default function ScrollStackSection({ sections }: ScrollStackSectionProps
                     onProgress={handleProgress}
                 />
             ))}
-            <ProgressBars total={sections.length} barsContainerRef={barsContainerRef} barFillRefs={barFillRefs} />
+            <ProgressBars
+                total={sections.length}
+                barsContainerRef={barsContainerRef}
+                barFillRefs={barFillRefs}
+            />
         </div>
     );
 }
-
-

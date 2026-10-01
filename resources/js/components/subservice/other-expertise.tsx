@@ -50,44 +50,44 @@ export default function OtherExpertise({ currentSlug }: OtherExpertiseProps) {
     useGrain(grainRef);
 
     return (
-        <section className="relative bg-black text-white px-6 sm:px-10 lg:px-16 py-20 lg:py-28 font-sans overflow-hidden">
+        <section className="relative overflow-hidden bg-black px-6 py-20 font-sans text-white sm:px-10 lg:px-16 lg:py-28">
             {/* Grain overlay for the section background */}
             <canvas
                 ref={grainRef}
                 aria-hidden="true"
-                className="absolute inset-0 z-0 w-full h-full pointer-events-none"
+                className="pointer-events-none absolute inset-0 z-0 h-full w-full"
             />
 
-            <div className="relative z-10 max-w-7xl mx-auto">
+            <div className="relative z-10 mx-auto max-w-7xl">
                 {/* Section Heading */}
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-10 sm:mb-14">
+                <h2 className="mb-10 text-3xl font-semibold tracking-tight text-white sm:mb-14 sm:text-4xl lg:text-5xl">
                     Other expertise
                 </h2>
 
                 {/* 2x2 Grid of Cards with sharp corners & compact height */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
                     {displayItems.map((item) => (
                         <Link
                             key={item.slug}
                             href={item.to}
-                            className="relative rounded-none overflow-hidden bg-[#1a1a1a] border border-white/10 p-6 sm:p-8 lg:p-9 min-h-[220px] sm:min-h-[270px] lg:min-h-[300px] flex flex-col justify-between group transition-all duration-500 hover:border-white/30 hover:shadow-2xl no-underline"
+                            className="group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-none border border-white/10 bg-[#1a1a1a] p-6 no-underline transition-all duration-500 hover:border-white/30 hover:shadow-2xl sm:min-h-[270px] sm:p-8 lg:min-h-[300px] lg:p-9"
                         >
                             {/* Footer TV Static Background Canvas */}
                             <StaticBackground />
 
                             {/* Subtly blended radial vignette for atmosphere */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-white/[0.03] pointer-events-none z-0" />
+                            <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-tr from-black/50 via-transparent to-white/[0.03]" />
 
                             {/* Card Header Content (Title + Button) */}
                             <div className="relative z-10 flex flex-col items-start gap-4">
-                                <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-semibold tracking-tight text-white leading-tight group-hover:text-white transition-colors">
+                                <h3 className="text-2xl leading-tight font-semibold tracking-tight text-white transition-colors group-hover:text-white sm:text-3xl lg:text-[34px]">
                                     {item.title}
                                 </h3>
 
-                                <span className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 hover:bg-white/20 text-white/90 text-xs sm:text-sm font-medium backdrop-blur-md border border-white/10 transition-all duration-300 group-hover:bg-white/25 group-hover:border-white/25 group-hover:text-white group-hover:scale-105">
+                                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/10 px-3.5 py-1.5 text-xs font-medium text-white/90 backdrop-blur-md transition-all duration-300 group-hover:scale-105 group-hover:border-white/25 group-hover:bg-white/25 group-hover:text-white hover:bg-white/20 sm:px-4 sm:py-2 sm:text-sm">
                                     Learn more
                                     <svg
-                                        className="w-3.5 h-3.5 stroke-current transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                                        className="h-3.5 w-3.5 stroke-current transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         viewBox="0 0 24 24"
                                         fill="none"
                                         strokeWidth="2.5"
@@ -103,7 +103,7 @@ export default function OtherExpertise({ currentSlug }: OtherExpertiseProps) {
                             <img
                                 src={item.img}
                                 alt={item.title}
-                                className="absolute right-0 bottom-0 h-[80%] sm:h-[88%] lg:h-[92%] w-auto max-w-[50%] sm:max-w-[55%] object-contain object-bottom pointer-events-none transition-transform duration-500 ease-out group-hover:scale-105 group-hover:-translate-y-1 z-10 drop-shadow-2xl"
+                                className="pointer-events-none absolute right-0 bottom-0 z-10 h-[80%] w-auto max-w-[50%] object-contain object-bottom drop-shadow-2xl transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-105 sm:h-[88%] sm:max-w-[55%] lg:h-[92%]"
                             />
                         </Link>
                     ))}

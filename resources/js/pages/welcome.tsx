@@ -17,7 +17,7 @@ export default function Welcome() {
             <WhyUsSection />
             <BlogSection />
             <TestimonialsSection />
-            <CtaSection/>
+            <CtaSection />
         </>
     );
 }

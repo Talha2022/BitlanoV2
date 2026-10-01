@@ -52,4 +52,3 @@ export function subscribeLenis(callback: LenisScrollCallback): () => void {
         }
     };
 }
-

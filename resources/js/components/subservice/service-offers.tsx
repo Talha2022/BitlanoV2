@@ -49,7 +49,7 @@ function TVStaticCanvas({ active }: { active: boolean }) {
     return (
         <canvas
             ref={canvasRef}
-            className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-300 z-0 ${
+            className={`pointer-events-none absolute inset-0 z-0 h-full w-full transition-opacity duration-300 ${
                 active ? 'opacity-35' : 'opacity-0'
             }`}
             style={{ mixBlendMode: 'screen' }}
@@ -79,24 +79,24 @@ export default function ServiceOffers({
     useGrain(grainRef);
 
     return (
-        <section className="relative bg-black text-white px-6 sm:px-10 lg:px-16 py-20 lg:py-28 border-b border-white/10 font-sans overflow-hidden">
+        <section className="relative overflow-hidden border-b border-white/10 bg-black px-6 py-20 font-sans text-white sm:px-10 lg:px-16 lg:py-28">
             {/* Grain overlay */}
             <canvas
                 ref={grainRef}
                 aria-hidden="true"
-                className="absolute inset-0 z-0 w-full h-full pointer-events-none"
+                className="pointer-events-none absolute inset-0 z-0 h-full w-full"
             />
-            
-            <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16">
+
+            <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-12 lg:flex-row lg:gap-16">
                 {/* Left Column: Title & Interactive Circle Accent */}
-                <div className="w-full lg:w-1/3 pt-2 flex flex-col justify-between items-start">
-                    <span className="text-xs sm:text-sm tracking-widest text-white/50 uppercase font-medium">
+                <div className="flex w-full flex-col items-start justify-between pt-2 lg:w-1/3">
+                    <span className="text-xs font-medium tracking-widest text-white/50 uppercase sm:text-sm">
                         {label}
                     </span>
                 </div>
 
                 {/* Right Column: List of Offer Items */}
-                <div className="w-full lg:w-2/3 flex flex-col">
+                <div className="flex w-full flex-col lg:w-2/3">
                     {offers.map((offerTitle, index) => {
                         const isHovered = hoveredIndex === index;
                         const isExpanded = expandedIndex === index;
@@ -106,36 +106,38 @@ export default function ServiceOffers({
                                 key={offerTitle}
                                 onMouseEnter={() => setHoveredIndex(index)}
                                 onMouseLeave={() => setHoveredIndex(null)}
-                                onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                                className="relative border-b border-white/15 overflow-hidden transition-all duration-300 group cursor-pointer"
+                                onClick={() =>
+                                    setExpandedIndex(isExpanded ? null : index)
+                                }
+                                className="group relative cursor-pointer overflow-hidden border-b border-white/15 transition-all duration-300"
                             >
                                 {/* TV Static Noise Canvas Background */}
                                 <TVStaticCanvas active={isHovered} />
 
                                 {/* Subtly darker base overlay when hovered */}
                                 <div
-                                    className={`absolute inset-0 bg-white/[0.03] transition-opacity duration-300 pointer-events-none z-0 ${
+                                    className={`pointer-events-none absolute inset-0 z-0 bg-white/[0.03] transition-opacity duration-300 ${
                                         isHovered ? 'opacity-100' : 'opacity-0'
                                     }`}
                                 />
 
                                 {/* Main Content Row */}
-                                <div className="relative z-10 flex items-center justify-between py-7 sm:py-9 px-4 sm:px-6 transition-all duration-300 group-hover:translate-x-2">
+                                <div className="relative z-10 flex items-center justify-between px-4 py-7 transition-all duration-300 group-hover:translate-x-2 sm:px-6 sm:py-9">
                                     {/* Offer Item Title */}
-                                    <h3 className="text-2xl sm:text-4xl lg:text-[44px] font-semibold tracking-tight text-white/90 group-hover:text-white transition-colors duration-200">
+                                    <h3 className="text-2xl font-semibold tracking-tight text-white/90 transition-colors duration-200 group-hover:text-white sm:text-4xl lg:text-[44px]">
                                         {offerTitle}
                                     </h3>
 
                                     {/* Down Arrow Circular Icon */}
                                     <div
-                                        className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/20 flex items-center justify-center text-white/60 shrink-0 transition-all duration-300 ${
+                                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/20 text-white/60 transition-all duration-300 sm:h-9 sm:w-9 ${
                                             isHovered
-                                                ? 'border-white text-white bg-white/10 scale-110'
+                                                ? 'scale-110 border-white bg-white/10 text-white'
                                                 : ''
                                         } ${isExpanded ? 'rotate-180 bg-white text-black' : 'rotate-0'}`}
                                     >
                                         <svg
-                                            className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-current"
+                                            className="h-3.5 w-3.5 stroke-current sm:h-4 sm:w-4"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             strokeWidth="2.5"
@@ -149,8 +151,11 @@ export default function ServiceOffers({
 
                                 {/* Optional Expandable Details */}
                                 {isExpanded && (
-                                    <div className="relative z-10 px-4 sm:px-6 pb-6 pt-1 text-white/70 text-base sm:text-lg leading-relaxed border-t border-white/5 animate-fadeIn">
-                                        We combine strategic execution with cutting-edge craftsmanship to deliver tailored results for {offerTitle.toLowerCase()}.
+                                    <div className="animate-fadeIn relative z-10 border-t border-white/5 px-4 pt-1 pb-6 text-base leading-relaxed text-white/70 sm:px-6 sm:text-lg">
+                                        We combine strategic execution with
+                                        cutting-edge craftsmanship to deliver
+                                        tailored results for{' '}
+                                        {offerTitle.toLowerCase()}.
                                     </div>
                                 )}
                             </div>

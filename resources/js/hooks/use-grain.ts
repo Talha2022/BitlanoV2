@@ -56,7 +56,7 @@ export function useGrain(canvasRef: RefObject<HTMLCanvasElement | null>) {
             ([entry]) => {
                 isVisible = entry.isIntersecting;
             },
-            { threshold: 0 }
+            { threshold: 0 },
         );
         observer.observe(canvas);
 
@@ -93,4 +93,3 @@ export function useGrain(canvasRef: RefObject<HTMLCanvasElement | null>) {
         };
     }, []);
 }
-
