@@ -100,7 +100,7 @@ export default function WhoWeAreSection() {
 
             <div className="relative z-20 mx-auto max-w-7xl space-y-4">
                 {/* Heading */}
-                <div className="mb-12 text-left">
+                <div className="mb-12 text-center">
                     <h2 className="text-[clamp(24px,12vw,90px)] leading-none font-extrabold tracking-tight whitespace-nowrap">
                         Who We Are
                     </h2>
