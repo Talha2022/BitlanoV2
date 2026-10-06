@@ -17,7 +17,7 @@ export default function Contact() {
             <div className="flex min-h-screen w-full flex-1 flex-col lg:flex-row">
                 {/* LEFT COLUMN: Contact Cards & Details */}
                 <div
-                    className="relative z-10 flex w-full flex-col justify-between px-6 pt-24 pb-10 sm:px-10 sm:pt-28 sm:pb-14 lg:w-[48%] lg:px-14 xl:w-[45%] 2xl:w-[42%]"
+                    className="relative z-10 order-last flex w-full flex-col justify-between px-6 pt-24 pb-10 sm:px-10 sm:pt-28 sm:pb-14 lg:order-first lg:w-[48%] lg:px-14 xl:w-[45%] 2xl:w-[42%]"
                     style={{ backgroundColor: '#1a1a1a' }}
                 >
                     {/* TV static overlay scoped to left column */}
@@ -171,8 +171,8 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* RIGHT COLUMN: Keyvisual — hidden on small mobile */}
-                <div className="relative hidden min-h-[400px] w-full flex-col items-center justify-end overflow-hidden sm:flex lg:min-h-screen lg:w-[52%] xl:w-[55%] 2xl:w-[58%]">
+                {/* RIGHT COLUMN: Keyvisual — shown on mobile first, full height on desktop */}
+                <div className="relative order-first flex min-h-[60vh] w-full flex-col items-center justify-end overflow-hidden sm:min-h-[400px] lg:order-last lg:min-h-screen lg:w-[52%] xl:w-[55%] 2xl:w-[58%]">
                     {/* Keyvisual background image */}
                     <img
                         src={keyvisual}
