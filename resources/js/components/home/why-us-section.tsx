@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import type React from 'react';
 import { useGrain } from '@/hooks/use-grain';
 import ScrollStackSection from '@/components/home/scroll-stack-section';
 
@@ -69,15 +70,15 @@ export default function WhyUsSection() {
 
                 <div className="relative z-20 px-6 py-16 sm:px-10 sm:py-24">
                     <div className="relative">
-                        {/* "Why us" — floats top-left in the text-indent gap */}
-                        <p className="absolute top-[3em] left-0 text-[10px] leading-none tracking-widest whitespace-nowrap text-white/50 sm:text-xs">
+                        {/* "Why us" — absolute at top-[1em] on mobile, top-[3em] on sm+ */}
+                        <p className="absolute top-[1em] left-0 text-[10px] leading-none tracking-widest whitespace-nowrap text-white/50 sm:top-[3em] sm:text-xs">
                             Why us
                         </p>
 
                         {/* Full-width paragraph, first line indented to clear the label */}
                         <p
-                            className="text-[clamp(28px,4.5vw,64px)] leading-[1.1] font-light tracking-tight"
-                            style={{ textIndent: 'clamp(80px, 12vw, 160px)' }}
+                            className="text-[clamp(22px,6vw,64px)] leading-[1.15] font-light tracking-tight sm:text-[clamp(28px,4.5vw,64px)] sm:leading-[1.1]"
+                            style={{ textIndent: 'clamp(60px, 12vw, 160px)' } as React.CSSProperties}
                         >
                             We see our clients as strategic partners. This
                             means: In close cooperation, we are there for a wide

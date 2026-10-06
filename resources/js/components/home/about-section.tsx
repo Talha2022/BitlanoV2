@@ -15,17 +15,17 @@ export default function AboutSection() {
             />
 
             {/* Content */}
-            <div className="relative z-20 px-6 py-16 sm:px-10 sm:py-24">
+            <div className="relative z-20 px-6 py-12 sm:px-10 sm:py-24">
                 <div className="relative">
-                    {/* "This is ESE" — floats top-left in the text-indent gap */}
-                    <p className="absolute top-[3em] left-2 text-[10px] leading-none tracking-widest whitespace-nowrap text-white/50 sm:text-xs">
-                        This is BITLANO
+                    {/* BITLANO label — absolute at top-[3em] on all sizes, aligns with a paragraph line */}
+                    <p className="absolute top-[1em] left-0 text-[10px] leading-none tracking-widest whitespace-nowrap text-white/50 sm:top-[3em] sm:left-2 sm:text-xs">
+                        BITLANO
                     </p>
 
-                    {/* Full-width paragraph, first line indented to clear the label */}
+                    {/* Paragraph — indent clears the label on all sizes */}
                     <p
-                        className="text-[clamp(28px,4.5vw,64px)] leading-[1.1] font-light tracking-tight text-white"
-                        style={{ textIndent: 'clamp(80px, 12vw, 160px)' }}
+                        className="text-[clamp(22px,6vw,64px)] leading-[1.15] font-light tracking-tight text-white sm:text-[clamp(28px,4.5vw,64px)] sm:leading-[1.1]"
+                        style={{ textIndent: 'clamp(60px, 12vw, 160px)' } as React.CSSProperties}
                     >
                         Culture-driven, creative and competitive. Our digital
                         agency creates impact for brands. In the disciplines

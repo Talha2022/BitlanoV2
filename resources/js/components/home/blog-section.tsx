@@ -121,23 +121,36 @@ export default function BlogSection() {
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
                     {posts.map((post, i) => (
                         <div
                             key={i}
-                            className="group flex cursor-pointer flex-col overflow-hidden"
+                            className="group flex cursor-pointer overflow-hidden
+                                       flex-row items-stretch rounded-xl bg-[#1a1a1a]
+                                       sm:flex-col sm:rounded-none sm:bg-transparent"
                         >
-                            {/* Image */}
-                            <div className="h-72 overflow-hidden sm:h-80">
+                            {/* Image — square thumbnail on mobile, full-width on sm+ */}
+                            <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-l-xl sm:h-80 sm:w-auto sm:rounded-none">
                                 <img
                                     src={post.img}
                                     alt={post.title}
-                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
 
-                            {/* Content with grain */}
-                            <CardContent post={post} />
+                            {/* Mobile: plain text block; sm+: CardContent with grain */}
+                            <div className="flex flex-1 flex-col justify-center gap-1.5 px-4 py-3 sm:hidden">
+                                <span className="text-[10px] tracking-widest text-white/40 uppercase">
+                                    {post.category}
+                                </span>
+                                <h3 className="text-sm leading-snug font-semibold text-white">
+                                    {post.title}
+                                </h3>
+                            </div>
+
+                            <div className="hidden sm:flex sm:flex-1 sm:flex-col">
+                                <CardContent post={post} />
+                            </div>
                         </div>
                     ))}
                 </div>
