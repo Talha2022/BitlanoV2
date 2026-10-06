@@ -30,8 +30,8 @@
             }
         </style>
 
-        <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="icon" href="/bitlano-logo.svg" type="image/svg+xml">
+        <link rel="shortcut icon" href="/bitlano-logo.svg">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
         @fonts
