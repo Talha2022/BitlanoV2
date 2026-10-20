@@ -32,7 +32,7 @@ export default function AboutSection() {
                         Websites, Social Media, Content Marketing, Campaigning
                         and Branding. Between timeless and zeitgeist. When we
                         communicate: Effective. Quick-witted. Ambitious. This is
-                        ESE Agency.
+                        Bitlano.
                     </p>
                 </div>
             </div>

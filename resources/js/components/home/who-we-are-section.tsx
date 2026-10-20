@@ -159,8 +159,7 @@ export default function WhoWeAreSection() {
                                 disciplines Websites, Social Media, Content
                                 Marketing, Campaigning and Branding. Between
                                 timeless and zeitgeist. When we communicate:
-                                Effective. Quick-witted. Ambitious. This is ESE
-                                Agency.
+                                Effective. Quick-witted. Ambitious. This is Bitlano.
                             </p>
                         </div>
                     </HudCard>
@@ -218,8 +217,7 @@ export default function WhoWeAreSection() {
                             disciplines Websites, Social Media, Content
                             Marketing, Campaigning and Branding. Between
                             timeless and zeitgeist. When we communicate:
-                            Effective. Quick-witted. Ambitious. This is ESE
-                            Agency.
+                            Effective. Quick-witted. Ambitious. This is Bitlano.
                         </p>
                     </HudCard>
                 </div>

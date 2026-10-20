@@ -1,0 +1,107 @@
+If you're building a marketing and digital agency, I recommend offering **5 core service categories**. This will make your agency look professional, keep your services organized, and help potential clients understand exactly what you do.
+
+Here is the service list I would use for your agency.
+
+# 01. Brand Identity & Strategy
+- Brand Strategy & Positioning
+- Logo & Visual Identity Design
+- Brand Guidelines
+- Brand Messaging & Voice
+- Packaging Design
+- Brand Refresh & Rebranding
+- Pitch Deck Design
+
+# 02. Website Design & Development
+- Website Design & Development
+- E-commerce Website Development
+- Landing Page Design
+- Website Redesign
+- UI/UX Design
+- Conversion Rate Optimization (CRO)
+- Website Maintenance
+- Search Engine Optimization (SEO)
+
+# 03. Marketing & Growth
+- Digital Marketing Strategy
+- Social Media Marketing
+- Paid Advertising (Meta & Google Ads)
+- Search Engine Optimization (SEO)
+- Content Marketing
+- Email Marketing & Automation
+- Copywriting
+- Lead Generation
+- Campaign Management
+- Analytics & Performance Reporting
+
+# 04. AI & Business Automation
+- AI Chatbots & Customer Support
+- AI Workflow Automation
+- Lead Qualification & Follow-ups
+- CRM Automation & Integration
+- Business Process Automation
+- AI Agent Development
+- Third-Party App Integrations
+- Custom AI Solutions
+
+# 05. Creative & Motion Design
+- Motion Graphics
+- Explainer Videos
+- Product Demo Videos
+- Social Media Ad Creatives
+- Brand Launch Videos
+- Video Editing
+- Presentation & Pitch Deck Design
+
+---
+
+## Additional Service Category (Optional)
+
+### 06. Digital Product Design
+- User Research
+- UX Audits
+- SaaS Product Design
+- UI/UX Design & Prototyping
+- MVP Design
+- Dashboard & Web App Design
+- Design Systems
+
+**My recommendation:** Keep this as a separate category only if you want to target SaaS companies, technology startups, and businesses building digital products.
+
+---
+
+## What I Would Prioritize
+
+Don't try to sell all these services equally from day one.
+
+| Priority | Category | Main objective |
+|---|---|---|
+| 1 | Marketing & Growth | Generate recurring monthly revenue |
+| 2 | Website Design & Development | Win high-value projects |
+| 3 | AI & Business Automation | Differentiate your agency |
+| 4 | Brand Identity & Strategy | Build brands and attract new businesses |
+| 5 | Creative & Motion Design | Support campaigns and generate additional revenue |
+| 6 | Digital Product Design | Target technology companies and startups |
+
+### Three important decisions
+
+- **Add paid advertising.** Explicitly list Meta Ads and Google Ads rather than using the vague term "campaigns."
+- **Keep SEO under Marketing & Growth.** You can mention it under Websites as well, but avoid presenting it as two separate services.
+- **Sell AI solutions based on business outcomes.** For example, automated lead follow-ups are clearer and easier to sell than technical terms such as agentic orchestration.
+
+### How I would present the categories on your website
+
+For the clean, minimal layout in your reference images, I would use these five headings:
+
+**(01) Brand Identity**
+
+**(02) Websites & Digital Products**
+
+**(03) Marketing & Growth**
+
+**(04) AI & Automation**
+
+**(05) Creative & Motion**
+
+This gives your agency a broad range of capabilities while keeping the presentation simple and modern.
+
+**My next recommendation:** Start by choosing your target clients—such as SaaS startups, e-commerce brands, or established businesses—because that decision will determine which of these services you should emphasize and which you should leave out initially.

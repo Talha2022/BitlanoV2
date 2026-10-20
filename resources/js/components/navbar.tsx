@@ -204,7 +204,7 @@ export default function Navbar({ transparent = false }: Props) {
                     href="/"
                     className="z-10 flex items-center gap-0.5 text-sm font-semibold tracking-wide text-white no-underline"
                 >
-                    ese agency
+                    bitlano
                     <span className="-mt-1 text-[10px] text-white/60">™</span>
                 </Link>
 
@@ -390,7 +390,7 @@ export default function Navbar({ transparent = false }: Props) {
                             }}
                             className="flex items-center gap-0.5 text-sm font-semibold tracking-wide text-white no-underline"
                         >
-                            ese agency
+                            bitlano
                             <span className="-mt-1 text-[10px] text-white/60">
                                 ™
                             </span>

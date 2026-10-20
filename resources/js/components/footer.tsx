@@ -158,7 +158,7 @@ export default function Footer() {
         <div>
             <address style={{ fontStyle: 'normal', marginBottom: '16px' }}>
                 <span style={{ ...linkStyle, display: 'block', lineHeight: '1.8' }}>
-                    ESE Agency
+                    Bitlano
                     <br />
                     Grubenstrasse 54
                     <br />
@@ -168,12 +168,12 @@ export default function Footer() {
                 </span>
             </address>
             <a
-                href="mailto:info@eseagency.ch"
+                href="mailto:info@bitlano.com"
                 style={{ ...linkStyle, display: 'block', marginBottom: '6px' }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = '#fff')}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.85)')}
             >
-                info@eseagency.ch
+                info@bitlano.com
             </a>
             <a
                 href="tel:+41522123071"
@@ -240,7 +240,7 @@ export default function Footer() {
     const linksContent = (
         <ul style={listStyle}>
             {[
-                { name: 'LinkedIn', url: 'https://www.linkedin.com/company/eseagency' },
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/company/bitlano' },
                 { name: 'TikTok', url: 'https://tiktok.com' },
                 { name: 'Webflow', url: 'https://webflow.com' },
                 { name: 'Awwwards', url: 'https://awwwards.com' },
@@ -303,7 +303,7 @@ export default function Footer() {
                             marginBottom: '40px',
                         }}
                     >
-                        ese agency
+                        bitlano
                         <span style={{ fontSize: '8px', verticalAlign: 'super', marginLeft: '1px' }}>™</span>
                     </Link>
 
@@ -319,7 +319,7 @@ export default function Footer() {
 
                     {/* Legal */}
                     <div style={{ padding: '28px 0' }}>
-                        <p style={{ ...legalStyle, marginBottom: '6px' }}>All rights reserved 2026 © ESE Agency</p>
+                        <p style={{ ...legalStyle, marginBottom: '6px' }}>All rights reserved 2026 © Bitlano</p>
                         <div style={{ display: 'flex', gap: '24px' }}>
                             <a
                                 href="/datenschutz"
@@ -366,7 +366,7 @@ export default function Footer() {
                                     lineHeight: 1,
                                 }}
                             >
-                                ese agency
+                                bitlano
                                 <span style={{ fontSize: '8px', verticalAlign: 'super', marginLeft: '1px' }}>™</span>
                             </Link>
                         </div>
@@ -415,7 +415,7 @@ export default function Footer() {
                             flexWrap: 'wrap',
                         }}
                     >
-                        <p style={legalStyle}>All rights reserved 2026 © ESE Agency</p>
+                        <p style={legalStyle}>All rights reserved 2026 © Bitlano</p>
                         <div style={{ display: 'flex', gap: '40px' }}>
                             <a
                                 href="/datenschutz"

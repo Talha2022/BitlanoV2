@@ -87,7 +87,7 @@ export default function Contact() {
                                 type="button"
                                 onClick={() =>
                                     (window.location.href =
-                                        'mailto:info@eseagency.ch')
+                                        'mailto:info@bitlano.com')
                                 }
                                 className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-[#313131] p-4 text-center transition-colors hover:bg-[#3a3a3a]"
                             >
@@ -146,10 +146,10 @@ export default function Contact() {
                                 E-Mail
                             </p>
                             <a
-                                href="mailto:info@eseagency.ch"
+                                href="mailto:info@bitlano.com"
                                 className="block text-base text-white no-underline"
                             >
-                                info@eseagency.ch
+                                info@bitlano.com
                             </a>
                         </div>
 
@@ -159,7 +159,7 @@ export default function Contact() {
                                 Adresse
                             </p>
                             <div className="text-base leading-snug text-white">
-                                ESE Agency
+                                Bitlano
                                 <br />
                                 Grubenstrasse 54
                                 <br />

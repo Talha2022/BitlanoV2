@@ -36,11 +36,11 @@ export default function AgencyAbout() {
             {/* Bottom block — large text */}
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-16 pb-20 sm:pb-32">
                 <p className="text-xs tracking-widest text-white/50 sm:whitespace-nowrap shrink-0 pt-2">
-                    This is ESE
+                    This is Bitlano
                 </p>
                 <p className="text-[clamp(22px,4vw,52px)] font-light leading-tight tracking-tight">
                     Over the last five years, we have grown from a team of three to a team
-                    of twenty. The three founders of the ESE Agency have built a prosperous
+                    of twenty. The three founders of Bitlano have built a prosperous
                     company from a high school graduation project. Everything is one hundred
                     percent "self-made". While others read theory books, we feel the spirit
                     of the times, set high goals and give our all to achieve them.

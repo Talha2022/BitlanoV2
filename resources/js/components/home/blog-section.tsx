@@ -5,7 +5,7 @@ const posts = [
     {
         img: '/assets/Blog/blog1.jpg',
         category: 'Denner',
-        title: 'ESE Agency & Manifesto Films: Denner blockbuster with Granit Xhaka and Terence Hill film-ready staged',
+        title: 'Bitlano & Manifesto Films: Denner blockbuster with Granit Xhaka and Terence Hill film-ready staged',
         author: 'Elia Binelli',
         avatar: '/assets/homepage/author-elia.jpg',
         readTime: '6 min',
