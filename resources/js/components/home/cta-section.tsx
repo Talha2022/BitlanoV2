@@ -1,5 +1,7 @@
 import { useRef } from 'react';
+import { Link } from '@inertiajs/react';
 import { useGrain } from '@/hooks/use-grain';
+import StaticBackground from '@/components/contact/static-background';
 
 export default function CtaSection() {
     const grainRef = useRef<HTMLCanvasElement>(null);
@@ -33,12 +35,21 @@ export default function CtaSection() {
                     <h2 className="mb-6 text-[clamp(20px,3.5vw,56px)] leading-tight font-extralight tracking-tight text-white">
                         Ready to make something great?
                     </h2>
-                    <a
+                    <Link
                         href="/contact"
-                        className="bg-white px-8 py-3 text-xs font-light tracking-widest text-black uppercase transition-colors duration-300 hover:bg-white/90"
+                        className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/20 bg-[#1a1a1a] px-8 py-3 text-xs font-light tracking-widest text-white uppercase no-underline transition-all duration-300 hover:border-white/50 hover:scale-[1.03]"
                     >
-                        Get Started
-                    </a>
+                        {/* Footer TV Static Background */}
+                        <StaticBackground />
+
+                        {/* Subtle hover overlay */}
+                        <div className="pointer-events-none absolute inset-0 z-[1] bg-white/0 transition-colors duration-300 group-hover:bg-white/10" />
+
+                        {/* Button text */}
+                        <span className="relative z-10 text-white">
+                            Get Started
+                        </span>
+                    </Link>
                 </div>
 
                 {/* Hand 1 — top left */}

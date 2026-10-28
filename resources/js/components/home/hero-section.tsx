@@ -3,7 +3,7 @@ import { useGrain } from '@/hooks/use-grain';
 import { subscribeLenis } from '@/hooks/use-lenis';
 
 const marqueeText =
-    'OVERTAKE TIME WITH US  OVERTAKE TIME WITH US  OVERTAKE TIME WITH US  ';
+    'OVERTAKE TIME WITH US - OVERTAKE TIME WITH US - OVERTAKE TIME WITH US - ';
 
 const FPS = 24;
 

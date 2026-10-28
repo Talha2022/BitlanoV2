@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function StaticBackground() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -20,6 +20,10 @@ export default function StaticBackground() {
 
         const draw = () => {
             const { width, height } = canvas;
+            if (width === 0 || height === 0) {
+                raf = requestAnimationFrame(draw);
+                return;
+            }
             const imageData = ctx.createImageData(width, height);
             const buf = imageData.data;
             for (let i = 0; i < buf.length; i += 4) {
