@@ -12,9 +12,10 @@ export default function Welcome() {
         <>
             <Head title="Home" />
             <HeroSection />
-            <AboutSection />
+
             {/* <WhoWeAreSection /> */}
             <WhyUsSection />
+            <AboutSection />
             <BlogSection />
             <TestimonialsSection />
             <CtaSection />

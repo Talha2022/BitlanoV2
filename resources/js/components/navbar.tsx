@@ -174,8 +174,8 @@ export default function Navbar({ transparent = false }: Props) {
                 backgroundColor: isDropdownOpen
                     ? '#000000'
                     : transparent
-                      ? 'transparent'
-                      : '#0d0d0e',
+                        ? 'transparent'
+                        : '#0d0d0e',
                 borderBottom: 'none',
                 transition: `background-color ${DURATION} ${EASING}, border-color ${DURATION} ${EASING}`,
             }}
@@ -199,13 +199,13 @@ export default function Navbar({ transparent = false }: Props) {
             />
 
             {/* Top Navbar Row */}
-            <div className="relative z-[1] mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 sm:px-10">
+            <div className="relative z-[1] mx-auto flex w-full max-w-8xl items-center justify-between px-6 py-6 sm:px-10">
                 <Link
                     href="/"
-                    className="z-10 flex items-center gap-0.5 text-sm font-semibold tracking-wide text-white no-underline"
+                    className="z-10 flex items-center gap-0.5 text-lg font-semibold tracking-wide text-white no-underline"
                 >
                     bitlano
-                    <span className="-mt-1 text-[10px] text-white/60">™</span>
+                    <span className="-mt-1 text-xs text-white/60">™</span>
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -224,26 +224,23 @@ export default function Navbar({ transparent = false }: Props) {
                                         onClick={() =>
                                             setIsDropdownOpen((prev) => !prev)
                                         }
-                                        className={`inline-flex cursor-pointer items-center gap-2 border-none bg-transparent text-sm no-underline transition-colors duration-200 ${
-                                            isDropdownOpen
-                                                ? 'font-semibold text-white'
-                                                : 'text-white/70 hover:text-white'
-                                        }`}
+                                        className={`inline-flex cursor-pointer items-center gap-2 border-none bg-transparent text-base no-underline transition-colors duration-200 ${isDropdownOpen
+                                            ? 'font-semibold text-white'
+                                            : 'text-white/70 hover:text-white'
+                                            }`}
                                     >
                                         <span>{label}</span>
                                         <span
-                                            className={`flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300 ${
-                                                isDropdownOpen
-                                                    ? 'border-white bg-white/20 text-white'
-                                                    : 'border-white/30 text-white/70'
-                                            }`}
+                                            className={`flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300 ${isDropdownOpen
+                                                ? 'border-white bg-white/20 text-white'
+                                                : 'border-white/30 text-white/70'
+                                                }`}
                                         >
                                             <svg
-                                                className={`h-2.5 w-2.5 transition-transform duration-300 ${
-                                                    isDropdownOpen
-                                                        ? 'rotate-180 text-white'
-                                                        : 'rotate-0 text-white/70'
-                                                }`}
+                                                className={`h-2.5 w-2.5 transition-transform duration-300 ${isDropdownOpen
+                                                    ? 'rotate-180 text-white'
+                                                    : 'rotate-0 text-white/70'
+                                                    }`}
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 stroke="currentColor"
@@ -264,18 +261,17 @@ export default function Navbar({ transparent = false }: Props) {
                                 {to ? (
                                     <Link
                                         href={to}
-                                        className={`text-sm no-underline transition-colors duration-200 ${
-                                            isActive
-                                                ? 'font-semibold text-white'
-                                                : 'text-white/70 hover:text-white'
-                                        }`}
+                                        className={`text-base no-underline transition-colors duration-200 ${isActive
+                                            ? 'font-semibold text-white'
+                                            : 'text-white/70 hover:text-white'
+                                            }`}
                                     >
                                         {label}
                                     </Link>
                                 ) : (
                                     <a
                                         href="#"
-                                        className="text-sm text-white/70 no-underline transition-colors duration-200 hover:text-white"
+                                        className="text-base text-white/70 no-underline transition-colors duration-200 hover:text-white"
                                     >
                                         {label}
                                     </a>
@@ -326,7 +322,7 @@ export default function Navbar({ transparent = false }: Props) {
                         zIndex: 0,
                     }}
                 />
-                <div className="relative z-[1] mx-auto max-w-7xl px-6 py-8 sm:px-10 lg:py-10">
+                <div className="relative z-[1] mx-auto max-w-8xl px-6 py-8 sm:px-10 lg:py-10">
                     <div className="flex items-start gap-12">
                         {/* Left label */}
                         <div className="w-48 shrink-0 pt-2">
@@ -336,7 +332,7 @@ export default function Navbar({ transparent = false }: Props) {
                         </div>
 
                         {/* Category list */}
-                        <div className="flex flex-1 flex-col">
+                        <div className="flex flex-1 flex-col pl-8 sm:pl-16 lg:pl-28">
                             {expertiseCategories.map(({ name, to }, i) => (
                                 <Link
                                     key={name}
@@ -358,7 +354,7 @@ export default function Navbar({ transparent = false }: Props) {
 
                         {/* Right — image changes on hover */}
                         <div
-                            className="relative hidden shrink-0 overflow-hidden rounded-lg lg:block"
+                            className="relative hidden shrink-0 overflow-hidden rounded-lg lg:block lg:mr-20 xl:mr-36"
                             style={{ width: '380px', height: '260px' }}
                         >
                             {expertiseCategories.map(({ name, img }, i) => (
@@ -388,10 +384,10 @@ export default function Navbar({ transparent = false }: Props) {
                                 setIsMobileMenuOpen(false);
                                 setMobileSubmenu(null);
                             }}
-                            className="flex items-center gap-0.5 text-sm font-semibold tracking-wide text-white no-underline"
+                            className="flex items-center gap-0.5 text-lg font-semibold tracking-wide text-white no-underline"
                         >
                             bitlano
-                            <span className="-mt-1 text-[10px] text-white/60">
+                            <span className="-mt-1 text-xs text-white/60">
                                 ™
                             </span>
                         </Link>

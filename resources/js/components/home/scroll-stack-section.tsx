@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import { subscribeLenis } from '@/hooks/use-lenis';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 interface SectionItem {
-    label: string;
+    label?: string;
     title: string;
-    taglines: string[];
+    taglines?: string[];
     background: string;
     foregroundImage: string;
 }
@@ -28,22 +28,6 @@ interface ProgressBarsProps {
 
 function Panel({ item, index, onProgress }: PanelProps) {
     const wrapperRef = useRef<HTMLDivElement>(null);
-
-    // Tagline cycler
-    const [taglineIndex, setTaglineIndex] = useState(0);
-    const [visible, setVisible] = useState(true);
-
-    useEffect(() => {
-        if (!item.taglines?.length) return;
-        const interval = setInterval(() => {
-            setVisible(false);
-            setTimeout(() => {
-                setTaglineIndex((i) => (i + 1) % item.taglines.length);
-                setVisible(true);
-            }, 400);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [item.taglines]);
 
     // Scroll progress for this panel's progress bar (Direct DOM update via callback)
     useEffect(() => {
@@ -93,13 +77,6 @@ function Panel({ item, index, onProgress }: PanelProps) {
                 {/* Dark overlay at bottom for text contrast */}
                 <div className="absolute inset-0 z-[2] bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-                {/* Label — top left */}
-                <div className="absolute top-8 left-8 z-10">
-                    <span className="text-sm font-medium tracking-wide text-white/80">
-                        {item.label}
-                    </span>
-                </div>
-
                 {/* Oversized title — marquee scrolling left */}
                 <div className="absolute right-0 bottom-16 left-0 z-10 overflow-hidden sm:bottom-20">
                     <div className="flex w-max animate-marquee">
@@ -113,17 +90,6 @@ function Panel({ item, index, onProgress }: PanelProps) {
                             {item.title}
                         </h2>
                     </div>
-
-                    {/* Animated tagline below title */}
-                    {item.taglines?.length > 0 && (
-                        <p
-                            className={`mt-1 pl-4 text-xs font-light tracking-widest text-white/70 transition-opacity duration-[400ms] sm:mt-2 sm:pl-6 sm:text-sm ${
-                                visible ? 'opacity-100' : 'opacity-0'
-                            }`}
-                        >
-                            {item.taglines[taglineIndex]}
-                        </p>
-                    )}
                 </div>
             </div>
         </div>
