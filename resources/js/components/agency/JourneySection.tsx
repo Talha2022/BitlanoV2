@@ -156,26 +156,12 @@ export function JourneySection() {
                             </div>
                             {/* Back — HudCard */}
                             <div ref={back1Ref} className="absolute inset-0" style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', zIndex: 10, opacity: 0 }}>
-                                <HudCard className="w-full h-full flex flex-col justify-between p-6">
-                                    <div>
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-1 h-1 bg-white/40" />
-                                            <span className="text-white/30 text-[8px] font-mono tracking-[0.4em] uppercase">01 · STRATEGY</span>
-                                        </div>
-                                        <div className="relative h-px mb-6">
-                                            <div className="absolute inset-0 bg-white/[0.08]" />
-                                            <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/40 to-transparent w-12" />
-                                        </div>
-                                        <h3 className="text-white/90 text-xl font-extralight tracking-[0.18em] uppercase mb-4 leading-none">Strategy</h3>
-                                        <p className="text-white/50 text-[11px] font-light tracking-wide leading-relaxed">
-                                            We craft tailored strategies that align with your vision and market dynamics.
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 bg-white/30" />
-                                        <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
-                                        <span className="text-white/30 text-[7px] font-mono tracking-[0.3em] uppercase">Phase · Alpha</span>
-                                    </div>
+                                <span className="absolute top-5 right-6 z-20 text-[4.5vw] font-extralight text-white/10 leading-none select-none pointer-events-none">01</span>
+                                <HudCard className="w-full h-full flex flex-col justify-end p-6">
+                                    <h3 className="text-white text-2xl font-light tracking-[0.15em] uppercase mb-3 leading-tight">Strategy</h3>
+                                    <p className="text-white/60 text-sm font-light tracking-wide leading-relaxed">
+                                        Every brand starts somewhere. We work with you to define your positioning, identify your audience, and build a strategy that turns ambition into a clear, actionable roadmap.
+                                    </p>
                                 </HudCard>
                             </div>
                         </div>
@@ -196,26 +182,12 @@ export function JourneySection() {
                             </div>
                             {/* Back — HudCard */}
                             <div ref={back2Ref} className="absolute inset-0" style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', zIndex: 10, opacity: 0 }}>
-                                <HudCard className="w-full h-full flex flex-col justify-between p-6">
-                                    <div>
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-1 h-1 bg-white/40" />
-                                            <span className="text-white/30 text-[8px] font-mono tracking-[0.4em] uppercase">02 · EXECUTION</span>
-                                        </div>
-                                        <div className="relative h-px mb-6">
-                                            <div className="absolute inset-0 bg-white/[0.08]" />
-                                            <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/40 to-transparent w-12" />
-                                        </div>
-                                        <h3 className="text-white/90 text-xl font-extralight tracking-[0.18em] uppercase mb-4 leading-none">Execution</h3>
-                                        <p className="text-white/50 text-[11px] font-light tracking-wide leading-relaxed">
-                                            We bring ideas to life with precision, creativity, and technical excellence.
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 bg-white/30" />
-                                        <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
-                                        <span className="text-white/30 text-[7px] font-mono tracking-[0.3em] uppercase">Phase · Beta</span>
-                                    </div>
+                                <span className="absolute top-5 right-6 z-20 text-[4.5vw] font-extralight text-white/10 leading-none select-none pointer-events-none">02</span>
+                                <HudCard className="w-full h-full flex flex-col justify-end p-6">
+                                    <h3 className="text-white text-2xl font-light tracking-[0.15em] uppercase mb-3 leading-tight">Execution</h3>
+                                    <p className="text-white/60 text-sm font-light tracking-wide leading-relaxed">
+                                        You have the vision — we bring the infrastructure. From design systems and development sprints to campaigns and content, we execute with precision so nothing gets lost between idea and reality.
+                                    </p>
                                 </HudCard>
                             </div>
                         </div>
@@ -236,26 +208,12 @@ export function JourneySection() {
                             </div>
                             {/* Back — HudCard */}
                             <div ref={back3Ref} className="absolute inset-0" style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', zIndex: 10, opacity: 0 }}>
-                                <HudCard className="w-full h-full flex flex-col justify-between p-6">
-                                    <div>
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-1 h-1 bg-white/40" />
-                                            <span className="text-white/30 text-[8px] font-mono tracking-[0.4em] uppercase">03 · GROWTH</span>
-                                        </div>
-                                        <div className="relative h-px mb-6">
-                                            <div className="absolute inset-0 bg-white/[0.08]" />
-                                            <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/40 to-transparent w-12" />
-                                        </div>
-                                        <h3 className="text-white/90 text-xl font-extralight tracking-[0.18em] uppercase mb-4 leading-none">Growth</h3>
-                                        <p className="text-white/50 text-[11px] font-light tracking-wide leading-relaxed">
-                                            We partner with you to scale sustainably and achieve lasting impact.
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 bg-white/30" />
-                                        <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
-                                        <span className="text-white/30 text-[7px] font-mono tracking-[0.3em] uppercase">Phase · Gamma</span>
-                                    </div>
+                                <span className="absolute top-5 right-6 z-20 text-[4.5vw] font-extralight text-white/10 leading-none select-none pointer-events-none">03</span>
+                                <HudCard className="w-full h-full flex flex-col justify-end p-6">
+                                    <h3 className="text-white text-2xl font-light tracking-[0.15em] uppercase mb-3 leading-tight">Growth</h3>
+                                    <p className="text-white/60 text-sm font-light tracking-wide leading-relaxed">
+                                        You've built something real — now it's time to scale it. We help established brands break through plateaus, enter new markets, and grow with the kind of momentum that lasts.
+                                    </p>
                                 </HudCard>
                             </div>
                         </div>
@@ -322,26 +280,12 @@ export function JourneySection() {
                                     pointerEvents: flippedCards[0] ? 'auto' : 'none'
                                 }}
                             >
-                                <HudCard className="w-full h-full flex flex-col justify-between p-6">
-                                    <div>
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-1 h-1 bg-white/40" />
-                                            <span className="text-white/30 text-[8px] font-mono tracking-[0.4em] uppercase">01 · STRATEGY</span>
-                                        </div>
-                                        <div className="relative h-px mb-6">
-                                            <div className="absolute inset-0 bg-white/[0.08]" />
-                                            <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/40 to-transparent w-12" />
-                                        </div>
-                                        <h3 className="text-white/90 text-xl font-extralight tracking-[0.18em] uppercase mb-4 leading-none">Strategy</h3>
-                                        <p className="text-white/50 text-[11px] font-light tracking-wide leading-relaxed">
-                                            We craft tailored strategies that align with your vision and market dynamics.
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 bg-white/30" />
-                                        <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
-                                        <span className="text-white/30 text-[7px] font-mono tracking-[0.3em] uppercase">Phase · Alpha</span>
-                                    </div>
+                                <HudCard className="w-full h-full flex flex-col justify-end p-6">
+                                    <span className="absolute top-5 right-6 z-20 text-7xl font-extralight text-white/10 leading-none select-none pointer-events-none">01</span>
+                                    <h3 className="text-white text-2xl font-light tracking-[0.15em] uppercase mb-3 leading-tight">Strategy</h3>
+                                    <p className="text-white/60 text-sm font-light tracking-wide leading-relaxed">
+                                        Every brand starts somewhere. We work with you to define your positioning, identify your audience, and build a strategy that turns ambition into a clear, actionable roadmap.
+                                    </p>
                                 </HudCard>
                             </div>
                         </div>
@@ -391,26 +335,12 @@ export function JourneySection() {
                                     pointerEvents: flippedCards[1] ? 'auto' : 'none'
                                 }}
                             >
-                                <HudCard className="w-full h-full flex flex-col justify-between p-6">
-                                    <div>
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-1 h-1 bg-white/40" />
-                                            <span className="text-white/30 text-[8px] font-mono tracking-[0.4em] uppercase">02 · EXECUTION</span>
-                                        </div>
-                                        <div className="relative h-px mb-6">
-                                            <div className="absolute inset-0 bg-white/[0.08]" />
-                                            <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/40 to-transparent w-12" />
-                                        </div>
-                                        <h3 className="text-white/90 text-xl font-extralight tracking-[0.18em] uppercase mb-4 leading-none">Execution</h3>
-                                        <p className="text-white/50 text-[11px] font-light tracking-wide leading-relaxed">
-                                            We bring ideas to life with precision, creativity, and technical excellence.
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 bg-white/30" />
-                                        <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
-                                        <span className="text-white/30 text-[7px] font-mono tracking-[0.3em] uppercase">Phase · Beta</span>
-                                    </div>
+                                <HudCard className="w-full h-full flex flex-col justify-end p-6">
+                                    <span className="absolute top-5 right-6 z-20 text-7xl font-extralight text-white/10 leading-none select-none pointer-events-none">02</span>
+                                    <h3 className="text-white text-2xl font-light tracking-[0.15em] uppercase mb-3 leading-tight">Execution</h3>
+                                    <p className="text-white/60 text-sm font-light tracking-wide leading-relaxed">
+                                        You have the vision — we bring the infrastructure. From design systems and development sprints to campaigns and content, we execute with precision so nothing gets lost between idea and reality.
+                                    </p>
                                 </HudCard>
                             </div>
                         </div>
@@ -460,26 +390,12 @@ export function JourneySection() {
                                     pointerEvents: flippedCards[2] ? 'auto' : 'none'
                                 }}
                             >
-                                <HudCard className="w-full h-full flex flex-col justify-between p-6">
-                                    <div>
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-1 h-1 bg-white/40" />
-                                            <span className="text-white/30 text-[8px] font-mono tracking-[0.4em] uppercase">03 · GROWTH</span>
-                                        </div>
-                                        <div className="relative h-px mb-6">
-                                            <div className="absolute inset-0 bg-white/[0.08]" />
-                                            <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/40 to-transparent w-12" />
-                                        </div>
-                                        <h3 className="text-white/90 text-xl font-extralight tracking-[0.18em] uppercase mb-4 leading-none">Growth</h3>
-                                        <p className="text-white/50 text-[11px] font-light tracking-wide leading-relaxed">
-                                            We partner with you to scale sustainably and achieve lasting impact.
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 bg-white/30" />
-                                        <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
-                                        <span className="text-white/30 text-[7px] font-mono tracking-[0.3em] uppercase">Phase · Gamma</span>
-                                    </div>
+                                <HudCard className="w-full h-full flex flex-col justify-end p-6">
+                                    <span className="absolute top-5 right-6 z-20 text-7xl font-extralight text-white/10 leading-none select-none pointer-events-none">03</span>
+                                    <h3 className="text-white text-2xl font-light tracking-[0.15em] uppercase mb-3 leading-tight">Growth</h3>
+                                    <p className="text-white/60 text-sm font-light tracking-wide leading-relaxed">
+                                        You've built something real — now it's time to scale it. We help established brands break through plateaus, enter new markets, and grow with the kind of momentum that lasts.
+                                    </p>
                                 </HudCard>
                             </div>
                         </div>
