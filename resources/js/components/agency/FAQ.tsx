@@ -65,14 +65,6 @@ export default function FAQ() {
                     <div className="lg:col-span-4">
                         <HudCard className="p-8 h-full flex flex-col justify-between min-h-[300px]">
                             <div>
-                                <div className="flex items-center gap-2 mb-6">
-                                    <div className="w-1 h-1 bg-white/20" />
-                                    <span className="text-white/40 text-[10px] font-mono tracking-[0.35em]">SYSTEM · FAQ</span>
-                                </div>
-                                <div className="relative h-px mb-8">
-                                    <div className="absolute inset-0 bg-white/[0.08]" />
-                                    <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/30 to-transparent w-12" />
-                                </div>
                                 <h3 className="text-white text-3xl font-extralight tracking-[0.1em] leading-tight uppercase mb-6">
                                     Transformation<br />
                                     with Smart UX<br />
@@ -83,11 +75,6 @@ export default function FAQ() {
                                     maintenance, we build scalable digital products that think, adapt, and grow with
                                     your audience.
                                 </p>
-                            </div>
-                            <div className="mt-8 flex items-center gap-3">
-                                <div className="w-1.5 h-1.5 bg-white/20" />
-                                <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
-                                <span className="text-white/20 text-[8px] font-mono tracking-[0.3em]">{faqItems.length} ITEMS</span>
                             </div>
                         </HudCard>
                     </div>
