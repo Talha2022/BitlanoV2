@@ -156,8 +156,9 @@ export default function WhoWeAreSection() {
                             >
                                 Culture-driven, creative and competitive. Our
                                 digital agency creates impact for brands. In the
-                                disciplines Websites, Social Media, Content
-                                Marketing, Campaigning and Branding. Between
+                                disciplines Brand Identity, Websites &amp; Digital
+                                Products, Marketing &amp; Growth, AI &amp; Automation
+                                and Creative &amp; Motion. Between
                                 timeless and zeitgeist. When we communicate:
                                 Effective. Quick-witted. Ambitious. This is Bitlano.
                             </p>
@@ -214,8 +215,9 @@ export default function WhoWeAreSection() {
                         >
                             Culture-driven, creative and competitive. Our
                             digital agency creates impact for brands. In the
-                            disciplines Websites, Social Media, Content
-                            Marketing, Campaigning and Branding. Between
+                            disciplines Brand Identity, Websites &amp; Digital
+                            Products, Marketing &amp; Growth, AI &amp; Automation
+                            and Creative &amp; Motion. Between
                             timeless and zeitgeist. When we communicate:
                             Effective. Quick-witted. Ambitious. This is Bitlano.
                         </p>

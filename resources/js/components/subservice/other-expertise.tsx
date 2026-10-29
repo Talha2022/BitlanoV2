@@ -5,34 +5,34 @@ import { useGrain } from '@/hooks/use-grain';
 
 const ALL_EXPERTISE = [
     {
-        slug: 'campaigning',
-        title: 'Campaigning',
-        to: '/expertise/campaigning',
-        img: '/assets/navbar/campaign.png',
-    },
-    {
-        slug: 'social-media',
-        title: 'Social Media',
-        to: '/expertise/social-media',
-        img: '/assets/navbar/social.png',
-    },
-    {
-        slug: 'branding-design',
-        title: 'Branding & Design',
-        to: '/expertise/branding-design',
+        slug: 'brand-identity',
+        title: 'Brand Identity',
+        to: '/expertise/brand-identity',
         img: '/assets/navbar/bd.png',
     },
     {
-        slug: 'employer-branding',
-        title: 'Employer branding',
-        to: '/expertise/employer-branding',
-        img: '/assets/navbar/empbd.png',
-    },
-    {
         slug: 'websites',
-        title: 'Websites',
+        title: 'Websites & Digital Products',
         to: '/expertise/websites',
         img: '/assets/navbar/website.png',
+    },
+    {
+        slug: 'marketing-growth',
+        title: 'Marketing & Growth',
+        to: '/expertise/marketing-growth',
+        img: '/assets/navbar/campaign.png',
+    },
+    {
+        slug: 'ai-automation',
+        title: 'AI & Automation',
+        to: '/expertise/ai-automation',
+        img: '/assets/navbar/social.png',
+    },
+    {
+        slug: 'creative-motion',
+        title: 'Creative & Motion',
+        to: '/expertise/creative-motion',
+        img: '/assets/navbar/empbd.png',
     },
 ];
 

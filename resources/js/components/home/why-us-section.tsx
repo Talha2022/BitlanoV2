@@ -5,27 +5,28 @@ import ScrollStackSection from '@/components/home/scroll-stack-section';
 
 const sections = [
     {
-        title: 'Storytelling — Employer Branding',
+        title: 'Brand Identity & Strategy',
         background:
-            'linear-gradient(135deg, #F4A020 0%, #EE8020 25%, #E8551F 55%, #E8304A 80%, #DE2A3A 100%)',
-        foregroundImage: '/assets/homepage/expertise-campaigning.jpg',
+            'linear-gradient(135deg, #200122 0%, #6f0000 100%)',
+        foregroundImage: '/assets/homepage/expertise-branding.jpg',
     },
     {
-        title: 'Content — Community — Growth',
-        background:
-            'linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%)',
-        foregroundImage: '/assets/homepage/expertise-social.jpg',
-    },
-    {
-        title: 'Design — Build — Launch',
+        title: 'Websites & Digital Products',
         background:
             'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)',
         foregroundImage: '/assets/homepage/expertise-websites.jpg',
     },
     {
-        title: 'Identity — Strategy — Voice',
-        background: 'linear-gradient(135deg, #200122 0%, #6f0000 100%)',
-        foregroundImage: '/assets/homepage/expertise-branding.jpg',
+        title: 'Marketing & Growth',
+        background:
+            'linear-gradient(135deg, #F4A020 0%, #EE8020 25%, #E8551F 55%, #E8304A 80%, #DE2A3A 100%)',
+        foregroundImage: '/assets/homepage/expertise-campaigning.jpg',
+    },
+    {
+        title: 'AI & Automation',
+        background:
+            'linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%)',
+        foregroundImage: '/assets/homepage/expertise-social.jpg',
     },
 ];
 

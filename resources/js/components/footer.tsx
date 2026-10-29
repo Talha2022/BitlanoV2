@@ -217,11 +217,11 @@ export default function Footer() {
     const expertiseContent = (
         <ul style={listStyle}>
             {[
-                { name: 'Campaigning', to: '/expertise/campaigning' },
-                { name: 'Social Media', to: '/expertise/social-media' },
-                { name: 'Branding & Design', to: '/expertise/branding-design' },
-                { name: 'Employer Branding', to: '/expertise/employer-branding' },
-                { name: 'Websites', to: '/expertise/websites' },
+                { name: 'Brand Identity', to: '/expertise/brand-identity' },
+                { name: 'Websites & Digital Products', to: '/expertise/websites' },
+                { name: 'Marketing & Growth', to: '/expertise/marketing-growth' },
+                { name: 'AI & Automation', to: '/expertise/ai-automation' },
+                { name: 'Creative & Motion', to: '/expertise/creative-motion' },
             ].map((item) => (
                 <li key={item.name} style={{ marginBottom: '10px' }}>
                     <Link

@@ -12,29 +12,29 @@ const links = [
 
 const expertiseCategories = [
     {
-        name: 'Campaigning',
-        to: '/expertise/campaigning',
-        img: '/assets/navbar/campaign.png',
-    },
-    {
-        name: 'Social Media',
-        to: '/expertise/social-media',
-        img: '/assets/navbar/social.png',
-    },
-    {
-        name: 'Branding & Design',
-        to: '/expertise/branding-design',
+        name: 'Brand Identity',
+        to: '/expertise/brand-identity',
         img: '/assets/navbar/bd.png',
     },
     {
-        name: 'Employer Branding',
-        to: '/expertise/employer-branding',
-        img: '/assets/navbar/empbd.png',
-    },
-    {
-        name: 'Websites',
+        name: 'Websites & Digital Products',
         to: '/expertise/websites',
         img: '/assets/navbar/website.png',
+    },
+    {
+        name: 'Marketing & Growth',
+        to: '/expertise/marketing-growth',
+        img: '/assets/navbar/campaign.png',
+    },
+    {
+        name: 'AI & Automation',
+        to: '/expertise/ai-automation',
+        img: '/assets/navbar/social.png',
+    },
+    {
+        name: 'Creative & Motion',
+        to: '/expertise/creative-motion',
+        img: '/assets/navbar/empbd.png',
     },
 ];
 

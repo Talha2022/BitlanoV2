@@ -34,8 +34,8 @@ export default function AboutSection() {
                     <p className="inline text-white font-light leading-[1.25] tracking-[-0.015em] text-[30px] sm:text-[40px] lg:text-[clamp(16px,4vw,75px)] align-baseline m-0">
                         Culture-driven, creative and competitive. Our digital
                         agency creates impact for brands. In the disciplines
-                        Websites, Social Media, Content Marketing, Campaigning
-                        and Branding. Between timeless and zeitgeist. When we
+                        Brand Identity, Websites &amp; Digital Products, Marketing &amp; Growth,
+                        AI &amp; Automation and Creative &amp; Motion. Between timeless and zeitgeist. When we
                         communicate: Effective. Quick-witted. Ambitious. This is
                         Bitlano.
                     </p>
