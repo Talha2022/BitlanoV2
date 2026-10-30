@@ -98,13 +98,9 @@ export default function WhoWeAreSection() {
                 }}
             />
 
-            <div className="relative z-20 mx-auto max-w-7xl space-y-4">
+            <div className="relative z-20 mx-auto w-full max-w-[2000px] space-y-4 px-[6vw] sm:px-10 lg:px-[60px]">
                 {/* Heading */}
-                <div className="mb-12 text-center">
-                    <h2 className="text-[clamp(24px,12vw,90px)] leading-none font-extrabold tracking-tight whitespace-nowrap">
-                        Who We Are
-                    </h2>
-                </div>
+                
 
                 {/* ── Desktop grid ── */}
                 <div className="hidden grid-cols-12 gap-3 md:grid">
@@ -205,22 +201,21 @@ export default function WhoWeAreSection() {
                     </div>
 
                     {/* Mission */}
-                    <HudCard className="flex flex-col p-8">
-                        <p className="absolute top-[1.5em] left-2 text-[10px] leading-none tracking-widest whitespace-nowrap text-white/50">
-                            This is BITLANO
-                        </p>
-                        <p
-                            className="text-[clamp(18px,4vw,28px)] leading-[1.1] font-light tracking-tight text-white"
-                            style={{ textIndent: 'clamp(80px, 12vw, 160px)' }}
-                        >
-                            Culture-driven, creative and competitive. Our
-                            digital agency creates impact for brands. In the
-                            disciplines Brand Identity, Websites &amp; Digital
-                            Products, Marketing &amp; Growth, AI &amp; Automation
-                            and Creative &amp; Motion. Between
-                            timeless and zeitgeist. When we communicate:
-                            Effective. Quick-witted. Ambitious. This is Bitlano.
-                        </p>
+                    <HudCard className="flex flex-col p-6">
+                        <div className="relative z-10 w-full">
+                            <h5 className="inline-block text-[14px] font-normal leading-none tracking-normal text-white/50 mr-[3em] align-baseline m-0">
+                                This is Bitlano
+                            </h5>
+                            <p className="inline text-white font-display font-light leading-[1.25] tracking-[-0.015em] text-[24px] align-baseline m-0">
+                                Culture-driven, creative and competitive. Our
+                                digital agency creates impact for brands. In the
+                                disciplines Brand Identity, Websites &amp; Digital
+                                Products, Marketing &amp; Growth, AI &amp; Automation
+                                and Creative &amp; Motion. Between
+                                timeless and zeitgeist. When we communicate:
+                                Effective. Quick-witted. Ambitious. This is Bitlano.
+                            </p>
+                        </div>
                     </HudCard>
                 </div>
 

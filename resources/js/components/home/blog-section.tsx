@@ -46,7 +46,7 @@ function CardContent({ post }: { post: (typeof posts)[number] }) {
                 <span className="text-xs tracking-widest text-white/40 uppercase">
                     {post.category}
                 </span>
-                <h3 className="flex-1 text-base leading-snug font-light text-white sm:text-lg">
+                <h3 className="flex-1 text-xl leading-snug font-light text-white sm:text-2xl">
                     {post.title}
                 </h3>
                 <div className="flex items-center gap-4 pt-3 text-xs text-white/50">
@@ -143,7 +143,7 @@ export default function BlogSection() {
                                 <span className="text-[10px] tracking-widest text-white/40 uppercase">
                                     {post.category}
                                 </span>
-                                <h3 className="text-sm leading-snug font-semibold text-white">
+                                <h3 className="text-xl leading-snug font-semibold text-white sm:text-2xl">
                                     {post.title}
                                 </h3>
                             </div>

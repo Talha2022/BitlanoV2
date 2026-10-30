@@ -72,14 +72,7 @@ export default function WhyUsSection() {
                         </p>
                     </motion.div>
 
-                    {/* Divider line matching utl__line with rows-150 spacing */}
-                    <motion.div
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: 1 }}
-                        viewport={{ once: true, margin: '-50px' }}
-                        transition={{ duration: 1, ease: [0.165, 0.84, 0.44, 1] }}
-                        className="origin-left w-full h-px bg-white/20 mt-[100px] md:mt-[130px] lg:mt-[150px] 2xl:mt-[200px]"
-                    />
+                    
                 </div>
             </section>
 

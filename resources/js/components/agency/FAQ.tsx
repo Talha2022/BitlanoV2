@@ -93,13 +93,8 @@ export default function FAQ() {
                                 <div className={`absolute inset-0 border transition-colors duration-500 ${openIndex === i ? 'border-white/25' : 'border-white/[0.10] group-hover:border-white/[0.18]'}`} />
                                 {/* inset border */}
                                 <div className="absolute inset-[3px] border border-white/[0.03]" />
-                                {/* corner brackets */}
-                                <svg className="absolute top-0 left-0 w-6 h-6 text-white/25 group-hover:text-white/50 transition-colors duration-500" viewBox="0 0 40 40" fill="none" stroke="currentColor">
-                                    <path d="M1 10 L1 1 L10 1" strokeWidth="0.7" />
-                                </svg>
-                                <svg className="absolute top-0 right-0 w-6 h-6 text-white/25 group-hover:text-white/50 transition-colors duration-500" viewBox="0 0 40 40" fill="none" stroke="currentColor">
-                                    <path d="M30 1 L39 1 L39 10" strokeWidth="0.7" />
-                                </svg>
+                                
+                                
 
                                 <div className="relative z-10 px-7 py-5">
                                     <div className="flex items-center justify-between gap-6">
