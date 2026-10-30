@@ -3,10 +3,8 @@ import { Link, usePage } from '@inertiajs/react';
 
 const links = [
     { label: 'Home', to: '/' },
-    { label: 'Work', to: '/work' },
     { label: 'Expertise', to: null, dropdown: true },
     { label: 'Agency', to: '/agency' },
-    { label: 'Jobs', to: '/work' },
     { label: 'Contact', to: '/contact' },
 ];
 
@@ -425,13 +423,6 @@ export default function Navbar({ transparent = false }: Props) {
                                 >
                                     Home
                                 </Link>
-                                <Link
-                                    href="/work"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-4xl font-semibold tracking-tight text-white no-underline transition-colors hover:text-white/80 sm:text-5xl"
-                                >
-                                    Work
-                                </Link>
 
                                 <div className="flex items-center gap-3">
                                     <button
@@ -463,13 +454,6 @@ export default function Navbar({ transparent = false }: Props) {
                                     className="text-4xl font-semibold tracking-tight text-white no-underline transition-colors hover:text-white/80 sm:text-5xl"
                                 >
                                     Agency
-                                </Link>
-                                <Link
-                                    href="/work"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-4xl font-semibold tracking-tight text-white no-underline transition-colors hover:text-white/80 sm:text-5xl"
-                                >
-                                    Jobs
                                 </Link>
                                 <Link
                                     href="/contact"

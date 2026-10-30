@@ -40,7 +40,7 @@ export default function FAQ() {
     useGrain(grainRef);
 
     return (
-        <section className="relative bg-black py-24 px-6 md:px-12 lg:px-16 overflow-hidden">
+        <section className="relative overflow-hidden bg-black px-6 py-16 md:px-12 md:py-24 lg:px-16">
             {/* Grain overlay */}
             <canvas
                 ref={grainRef}
@@ -48,29 +48,29 @@ export default function FAQ() {
                 className="pointer-events-none absolute inset-0 z-0 h-full w-full"
             />
 
-            <div className="relative z-10 max-w-7xl mx-auto">
+            <div className="relative z-10 mx-auto max-w-7xl">
                 {/* Heading */}
-                <div className="mb-16 text-center">
-                    <h2 className="font-cardonas text-5xl md:text-6xl lg:text-7xl tracking-[0.12em] text-white mb-5 leading-tight uppercase">
+                <div className="mb-10 text-center md:mb-16">
+                    <h2 className="font-display mb-4 text-4xl leading-tight tracking-[0.12em] text-white uppercase md:mb-5 md:text-6xl lg:text-7xl">
                         Questions
                     </h2>
-                    <p className="text-white/50 text-sm font-light tracking-[0.2em] uppercase">
+                    <p className="text-xs font-light tracking-[0.2em] text-white/50 uppercase md:text-sm">
                         Everything you need to know before we start.
                     </p>
                 </div>
 
-                {/* Two-column layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    {/* Left — sticky label panel */}
+                {/* Two-column layout — stacks on mobile */}
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12">
+                    {/* Left panel — full width on mobile, col-span-4 on lg */}
                     <div className="lg:col-span-4">
-                        <HudCard className="p-8 h-full flex flex-col justify-between min-h-[300px]">
+                        <HudCard className="flex flex-col justify-between p-6 md:p-8 lg:h-full lg:min-h-[300px]">
                             <div>
-                                <h3 className="text-white text-3xl font-extralight tracking-[0.1em] leading-tight uppercase mb-6">
+                                <h3 className="font-display mb-4 text-2xl font-extralight leading-tight tracking-[0.1em] text-white uppercase md:mb-6 md:text-3xl">
                                     Transformation<br />
                                     with Smart UX<br />
                                     &amp; Scalable Tech
                                 </h3>
-                                <p className="text-white/55 text-sm font-light tracking-wide leading-[1.8]">
+                                <p className="text-xs font-light leading-[1.8] tracking-wide text-white/55 md:text-sm">
                                     You have the vision — we engineer for the future. From predictive UX to autonomous
                                     maintenance, we build scalable digital products that think, adapt, and grow with
                                     your audience.
@@ -80,7 +80,7 @@ export default function FAQ() {
                     </div>
 
                     {/* Right — accordion */}
-                    <div className="lg:col-span-8 space-y-3">
+                    <div className="space-y-2 lg:col-span-8 lg:space-y-3">
                         {faqItems.map((item, i) => (
                             <div
                                 key={i}
@@ -93,21 +93,21 @@ export default function FAQ() {
                                 <div className={`absolute inset-0 border transition-colors duration-500 ${openIndex === i ? 'border-white/25' : 'border-white/[0.10] group-hover:border-white/[0.18]'}`} />
                                 {/* inset border */}
                                 <div className="absolute inset-[3px] border border-white/[0.03]" />
-                                
-                                
 
-                                <div className="relative z-10 px-7 py-5">
-                                    <div className="flex items-center justify-between gap-6">
-                                        <div className="flex items-center gap-4">
-                                            <span className="text-white/25 text-[8px] font-mono tracking-[0.25em] flex-shrink-0">
+                                <div className="relative z-10 px-4 py-4 sm:px-7 sm:py-5">
+                                    <div className="flex items-start justify-between gap-4">
+                                        <div className="flex items-start gap-3 sm:gap-4">
+                                            <span className="mt-0.5 flex-shrink-0 font-mono text-[8px] tracking-[0.25em] text-white/25">
                                                 {String(i + 1).padStart(2, '0')}
                                             </span>
-                                            <h3 className="text-white/90 text-sm font-light tracking-wide">{item.question}</h3>
+                                            <h3 className="text-xs font-light leading-snug tracking-wide text-white/90 sm:text-sm">
+                                                {item.question}
+                                            </h3>
                                         </div>
                                         {/* toggle icon */}
-                                        <div className={`w-6 h-6 border flex-shrink-0 flex items-center justify-center transition-all duration-500 ${openIndex === i ? 'border-white/40 bg-white/10' : 'border-white/15'}`}>
+                                        <div className={`mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center border transition-all duration-500 sm:h-6 sm:w-6 ${openIndex === i ? 'border-white/40 bg-white/10' : 'border-white/15'}`}>
                                             <svg
-                                                className={`w-3 h-3 text-white/60 transition-transform duration-500 ${openIndex === i ? 'rotate-45' : ''}`}
+                                                className={`h-2.5 w-2.5 text-white/60 transition-transform duration-500 sm:h-3 sm:w-3 ${openIndex === i ? 'rotate-45' : ''}`}
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -118,13 +118,13 @@ export default function FAQ() {
                                     </div>
 
                                     {/* answer */}
-                                    <div className={`grid transition-all duration-500 ease-in-out ${openIndex === i ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
+                                    <div className={`grid transition-all duration-500 ease-in-out ${openIndex === i ? 'mt-4 grid-rows-[1fr] opacity-100' : 'mt-0 grid-rows-[0fr] opacity-0'}`}>
                                         <div className="overflow-hidden">
-                                            <div className="relative h-px mb-4">
+                                            <div className="relative mb-3 h-px">
                                                 <div className="absolute inset-0 bg-white/[0.08]" />
-                                                <div className="absolute left-0 top-0 h-px bg-gradient-to-r from-white/20 to-transparent w-16" />
+                                                <div className="absolute left-0 top-0 h-px w-16 bg-gradient-to-r from-white/20 to-transparent" />
                                             </div>
-                                            <p className="text-white/60 text-sm font-light tracking-wide leading-[1.8] pl-10">
+                                            <p className="pl-6 text-xs font-light leading-[1.8] tracking-wide text-white/60 sm:pl-10 sm:text-sm">
                                                 {item.answer}
                                             </p>
                                         </div>

@@ -190,10 +190,8 @@ export default function Footer() {
         <ul style={listStyle}>
             {[
                 { name: 'Home', to: '/' },
-                { name: 'Work', to: '/work' },
                 { name: 'Agency', to: '/agency' },
                 { name: 'Team', to: '/team' },
-                { name: 'Jobs', to: '/jobs' },
                 { name: 'Contact', to: '/contact' },
                 { name: 'For You', to: '/for-you' },
                 { name: 'Web-Showcase', to: '/web-showcase' },
