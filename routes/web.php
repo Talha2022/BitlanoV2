@@ -8,6 +8,8 @@ Route::inertia('/contact', 'contact')->name('contact');
 
 Route::inertia('/agency', 'agency')->name('agency');
 
+Route::inertia('/blog', 'blog')->name('blog');
+
 Route::get('/expertise/{service}', function ($service) {
     return inertia('subservice', ['slug' => $service]);
 })->name('expertise.show');
